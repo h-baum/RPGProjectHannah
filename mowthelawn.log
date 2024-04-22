@@ -1,0 +1,225 @@
+INFO:__main__:
+This is the log file for mow the lawn. It should track every user input and every print
+INFO:__main__:Welcome to Mow the Lawn! Do your best to mow the lawn today.
+
+INFO:__main__:
+This is the log file for mow the lawn. It should track every user input and every print
+INFO:__main__:Welcome to Mow the Lawn! Do your best to mow the lawn today.
+
+INFO:__main__:Items in inventory: 
+
+INFO:__main__:
+This is the log file for mow the lawn. It should track every user input and every print
+INFO:__main__:Welcome to Mow the Lawn! Do your best to mow the lawn today.
+
+INFO:__main__:Items in inventory: 
+
+INFO:__main__:You have 300 minutes left.
+You are a bit thirsty.
+INFO:__main__:
+This is the log file for mow the lawn. It should track every user input and every print
+INFO:__main__:Welcome to Mow the Lawn! Do your best to mow the lawn today.
+
+INFO:__main__:Items in inventory: 
+
+INFO:__main__:You have 300 minutes left.
+You are a bit thirsty.
+INFO:__main__:<bound method PlayerStatus.get_hydration of <__main__.PlayerStatus object at 0x7fb085d7ce20>> is your water level.
+INFO:__main__:
+This is the log file for mow the lawn. It should track every user input and every print
+INFO:__main__:Welcome to Mow the Lawn! Do your best to mow the lawn today.
+
+INFO:__main__:Items in inventory: 
+
+INFO:__main__:You have 300 minutes left.
+You are a bit thirsty.
+INFO:__main__:9 is your water level.
+INFO:__main__:
+This is the log file for mow the lawn. It should track every user input and every print
+INFO:__main__:Welcome to Mow the Lawn! Do your best to mow the lawn today.
+
+INFO:__main__:Items in inventory: 
+
+INFO:__main__:You have 300 minutes left.
+You are a bit thirsty.
+INFO:__main__:9 is your water level.
+INFO:__main__:User input is note -> Note.
+INFO:__main__:User input is stale water -> Stale Water.
+INFO:__main__:
+This is the log file for mow the lawn. It should track every user input and every print
+INFO:__main__:Welcome to Mow the Lawn! Do your best to mow the lawn today.
+
+INFO:__main__:Items in inventory: 
+
+INFO:__main__:You have 300 minutes left.
+You are a bit thirsty.
+INFO:__main__:9 is your water level.
+INFO:__main__:User input is stale water -> Stale Water.
+INFO:__main__:User input is wallet -> Wallet.
+INFO:__main__:User input is kitchen -> Kitchen.
+INFO:__main__:User input is water bottle -> Water Bottle.
+INFO:__main__:User input is water bottle -> Water Bottle.
+INFO:__main__:User input is keys -> Keys.
+INFO:__main__:User input is garage -> Garage.
+INFO:__main__:User input is car -> Car.
+INFO:__main__:User input is gas station -> Gas Station.
+INFO:__main__:User input is gas can -> Gas Can.
+INFO:__main__:User input is hardware store -> Hardware Store.
+INFO:__main__:User input is air filter -> Air Filter.
+INFO:__main__:User input is garage -> Garage.
+INFO:__main__:User input is mower -> Mower.
+INFO:__main__:User input is start mowing -> Start Mowing.
+INFO:__main__:User input is mow front -> Mow Front.
+INFO:__main__:User input is mow back -> Mow Back.
+INFO:__main__:
+This is the log file for mow the lawn. It should track every user input and every print
+INFO:__main__:Welcome to Mow the Lawn! Do your best to mow the lawn today.
+
+INFO:__main__:Items in inventory: 
+
+INFO:__main__:You have 300 minutes left.
+You are a bit thirsty.
+INFO:__main__:9 is your water level.
+INFO:__main__:User input is stale water -> Stale Water.
+INFO:__main__:User input is wallet -> Wallet.
+INFO:__main__:User input is kitchen -> Kitchen.
+INFO:__main__:User input is keys -> Keys.
+INFO:__main__:User input is garage -> Garage.
+INFO:__main__:User input is car -> Car.
+INFO:__main__:User input is gas station -> Gas Station.
+INFO:__main__:User input is gas can -> Gas Can.
+INFO:__main__:User input is hardware store -> Hardware Store.
+INFO:__main__:User input is air filter -> Air Filter.
+INFO:__main__:User input is garage -> Garage.
+INFO:__main__:User input is mower -> Mower.
+INFO:__main__:User input is start mowing -> Start Mowing.
+INFO:__main__:User input is mow front -> Mow Front.
+INFO:__main__:User input is mow back -> Mow Back.
+INFO:__main__:
+This is the log file for mow the lawn. It should track every user input and every print
+INFO:__main__:Welcome to Mow the Lawn! Do your best to mow the lawn today.
+
+INFO:__main__:Items in inventory: 
+
+INFO:__main__:You have 300 minutes left.
+You are a bit thirsty.
+INFO:__main__:9 is your water level.
+INFO:__main__:User input is stale water -> Stale Water.
+INFO:__main__:User input is kitchen -> Kitchen.
+INFO:__main__:User input is water bottles -> Water Bottles.
+INFO:__main__:User input is water bottles -> Water Bottles.
+INFO:__main__:User input is water bottle -> Water Bottle.
+INFO:__main__:User input is water bottle -> Water Bottle.
+INFO:__main__:
+This is the log file for mow the lawn. It should track every user input and every print
+INFO:__main__:Welcome to Mow the Lawn! Do your best to mow the lawn today.
+
+INFO:__main__:Items in inventory: 
+
+INFO:__main__:You have 300 minutes left.
+You are a bit thirsty.
+INFO:__main__:9 is your water level.
+INFO:__main__:User input is kitchen -> Kitchen.
+INFO:__main__:User input is water bottle -> Water Bottle.
+INFO:__main__:User input is water bottles -> Water Bottles.
+INFO:__main__:User input is water bottle -> Water Bottle.
+INFO:__main__:User input is water bottles -> Water Bottles.
+INFO:__main__:User input is water bottle -> Water Bottle.
+INFO:__main__:
+This is the log file for mow the lawn. It should track every user input and every print
+INFO:__main__:Welcome to Mow the Lawn! Do your best to mow the lawn today.
+
+INFO:__main__:Items in inventory: 
+
+INFO:__main__:You have 300 minutes left.
+You are a bit thirsty.
+INFO:__main__:9 is your water level.
+INFO:__main__:User input is stale water -> Stale Water.
+INFO:__main__:User input is note -> Note.
+INFO:__main__:User input is kitchen -> Kitchen.
+INFO:__main__:User input is water bottles -> Water Bottles.
+INFO:__main__:User input is water bottle -> Water Bottle.
+INFO:__main__:User input is garage -> Garage.
+INFO:__main__:User input is kitchen -> Kitchen.
+INFO:__main__:User input is keys -> Keys.
+INFO:__main__:User input is garage -> Garage.
+INFO:__main__:User input is car -> Car.
+INFO:__main__:User input is boba shop -> Boba Shop.
+INFO:__main__:User input is garage -> Garage.
+INFO:__main__:
+This is the log file for mow the lawn. It should track every user input and every print
+INFO:__main__:Welcome to Mow the Lawn! Do your best to mow the lawn today.
+
+INFO:__main__:Items in inventory: 
+
+INFO:__main__:You have 300 minutes left.
+You are a bit thirsty.
+INFO:__main__:9 is your water level.
+INFO:__main__:User input is kitchen -> Kitchen.
+INFO:__main__:User input is keys -> Keys.
+INFO:__main__:User input is garage -> Garage.
+INFO:__main__:User input is car -> Car.
+INFO:__main__:User input is boba shop -> Boba Shop.
+INFO:__main__:User input is boba tea -> Boba Tea.
+INFO:__main__:
+This is the log file for mow the lawn. It should track every user input and every print
+INFO:__main__:Welcome to Mow the Lawn! Do your best to mow the lawn today.
+
+INFO:__main__:Items in inventory: 
+
+INFO:__main__:You have 300 minutes left.
+You are a bit thirsty.
+INFO:__main__:9 is your water level.
+INFO:__main__:User input is stale water -> Stale Water.
+INFO:__main__:User input is kitchen -> Kitchen.
+INFO:__main__:User input is water bottles -> Water Bottles.
+INFO:__main__:User input is water bottle -> Water Bottle.
+INFO:__main__:User input is water bottles -> Water Bottles.
+INFO:__main__:User input is keys -> Keys.
+INFO:__main__:User input is garage -> Garage.
+INFO:__main__:User input is car -> Car.
+INFO:__main__:User input is boba sop -> Boba Sop.
+INFO:__main__:User input is boba shop -> Boba Shop.
+INFO:__main__:User input is hardware store -> Hardware Store.
+INFO:__main__:User input is boba shop -> Boba Shop.
+INFO:__main__:User input is hardware store -> Hardware Store.
+INFO:__main__:User input is boba shop -> Boba Shop.
+INFO:__main__:User input is hardware store -> Hardware Store.
+INFO:__main__:User input is boba shop -> Boba Shop.
+INFO:__main__:User input is coffee shop -> Coffee Shop.
+INFO:__main__:User input is gas station -> Gas Station.
+INFO:__main__:User input is boba shop -> Boba Shop.
+INFO:__main__:User input is coffee shop -> Coffee Shop.
+INFO:__main__:User input is gas station -> Gas Station.
+INFO:__main__:User input is water bottle -> Water Bottle.
+INFO:__main__:User input is boba shop -> Boba Shop.
+INFO:__main__:User input is gas station -> Gas Station.
+INFO:__main__:
+This is the log file for mow the lawn. It should track every user input and every print
+INFO:__main__:Welcome to Mow the Lawn! Do your best to mow the lawn today.
+
+INFO:__main__:Items in inventory: 
+
+INFO:__main__:You have 0 minutes left.
+You are a bit thirsty.
+INFO:__main__:9 is your water level.
+INFO:__main__:
+This is the log file for mow the lawn. It should track every user input and every print
+INFO:__main__:Welcome to Mow the Lawn! Do your best to mow the lawn today.
+
+INFO:__main__:Items in inventory: 
+
+INFO:__main__:You have 0 minutes left.
+You are a bit thirsty.
+INFO:__main__:9 is your water level.
+INFO:__main__:
+This is the log file for mow the lawn. It should track every user input and every print
+INFO:__main__:Welcome to Mow the Lawn! Do your best to mow the lawn today.
+
+INFO:__main__:Items in inventory: 
+
+INFO:__main__:You have 20 minutes left.
+You are a bit thirsty.
+INFO:__main__:9 is your water level.
+INFO:__main__:User input is kitchen -> Kitchen.
+INFO:__main__:User input is garage -> Garage.

@@ -32,10 +32,11 @@ class AdventureMap:
         return self.map[room_name]
 
 class Room:
-    def __init__(self, name, description, exits, items, time, hydration):
+    def __init__(self, name, description, exits, unlockable_exit, items, time, hydration):
         self.name = name
         self.description = description
         self.exits = exits
+        self.unlockable_exit = unlockable_exit
         self.items = items
         self.time = time
         self.hydration = hydration
@@ -54,6 +55,13 @@ class Room:
         for i in self.get_exits():
             string_exits += f"{i}\n"
         return string_exits
+
+    def get_unlockable_exit(self):
+        return self.unlockable_exit
+
+    def update_exits(self):
+        self.list_exits().append(self.unlockable_exit)
+        return self.exits
     
     def get_items(self):
         return self.items
@@ -91,29 +99,37 @@ class Room:
         string_overall += f"{self.get_name()}: "
         string_overall += f"{self.get_description()}\n\n"
         string_overall += f"Exits:\n{self.list_exits()}\n"
-        string_overall += f"Time left is {self.get_time()} minutes\n"
-        string_overall += f"Hydration level is {self.get_hydration()}\n"
+        string_overall += f"You have {self.get_time()} minutes before your parents get home\n"
+        string_overall += f"Your current hydration level is {self.get_hydration()}\n"
         return string_overall
 
 
 def main():
     adventure_map = AdventureMap()
     time = 600
-
-    adventure_map.add_room(Room("Bedroom", "A messy room that desparately needs organizing and cleaning. At least nothing is growing, I think?", ['Kitchen', 'Parent\'s Room'], ["Note", "Wallet"],time - 10, ""))
-    adventure_map.add_room(Room("Kitchen", "A room with a leaky sink and an empty fridge.", ['Garage', 'Parent\'s Room', 'Bedroom'], [], time-10, ""))
-    adventure_map.add_room(Room("Parent's Room", "A fresh clean room. The beds are nicely made, the clothes are folded and put away. Maybe you could take some hints?", ['Kitchen', 'Bedroom'], ["Parent_Wallet"], time - 10, ""))
-    adventure_map.add_room(Room("Garage", "There's a car parked up front. There's some tools and ladders against the walls.", ['Gas Station', 'Starbucks', 'Boba Shop', 'Back-Yard'], ["Gas_Can", "Car", "Mower", "Bug_Spray"], time-10, ""))
-    adventure_map.add_room(Room("Boba Shop", "A shop stocked with all the delicious boba drinks you could imagine!!!", ['Garage', 'Starbucks', 'Gas Station'], ["Car"], time-10, ""))
-    adventure_map.add_room(Room("Starbucks", "A shop stocked with many caffeinated drinks. Could caffeine be useful?", ['Garage', 'Boba Shop', 'Gas Station'],["Car"], time-10, ""))
-    adventure_map.add_room(Room("Gas Station", "A store containing gas for your lawn mower", ['Garage', 'Boba Shop', 'Starbucks'], ["Car"], time-10, ""))
-    adventure_map.add_room(Room("Back-Yard", "Your parents have a big yard. Maybe they should consider downsizing?", ['Garage', 'Side-Yard', 'Front-Yard'], [], time-10, ""))
-    adventure_map.add_room(Room("Front-Yard", "There's a mysterious hole in the ground", ['Back-Yard', 'Side-Yard'], [], time-10, ""))
-    adventure_map.add_room(Room("Side-Yard", "Almost done mowing!!!", ['Back-Yard', 'Front-Yard'], [], time-10, ""))
+    hydration = 10
+    #House rooms
+    adventure_map.add_room(Room("Bedroom", "A messy room that desparately needs organizing and cleaning. At least nothing is growing, I think?", ['Kitchen', 'Parent\'s Room'], [], ["Note", "Wallet"], 10, .34))
+    adventure_map.add_room(Room("Kitchen", "A room with a leaky sink and an empty fridge.", ['Garage', 'Parent\'s Room', 'Bedroom'], [], [], 10, .34))
+    adventure_map.add_room(Room("Parent's Room", "A fresh clean room. The beds are nicely made, the clothes are folded and put away. Maybe you could take some hints?", ['Kitchen', 'Bedroom'], [], ["Parent_Wallet"], 10, .34))
+    adventure_map.add_room(Room("Garage", "There's a car parked up front. There's some tools and ladders against the walls.", ['Kitchen', 'Front-Yard', 'Back-Yard', 'Car'], ['Start Mower'], ["Gas_Can", "Mower", "Bug_Spray"], 10, .34))
+    adventure_map.add_room(Room("Start Mower", "You successfully start the mower.", ['Mow Front', 'Mow Back', 'Garage'], [], [], 10, .34))
+    adventure_map.add_room(Room("Car", "You get inside the vehicle.", ['Garage'], ['Boba Shop','Starbucks','Gas Station'], [], 10, .34))
+    #Outside locations
+    adventure_map.add_room(Room("Boba Shop", "A shop stocked with all the delicious boba drinks you could imagine!!!", ['Garage', 'Starbucks', 'Gas Station'], [], ["Car"], 10, .34))
+    adventure_map.add_room(Room("Starbucks", "A shop stocked with many caffeinated drinks. Could caffeine be useful?", ['Garage', 'Boba Shop', 'Gas Station'], [], ["Car"], 10, .34))
+    adventure_map.add_room(Room("Gas Station", "A store containing gas for your lawn mower", ['Garage', 'Boba Shop', 'Starbucks'], [], [], 10, 1))
+    #adventure_
+    #Yard pieces
+    adventure_map.add_room(Room("Back-Yard", "Your parents have a big yard. Maybe they should consider downsizing?", ['Garage', 'Front-Yard'], [], [], 10, 1))
+    adventure_map.add_room(Room("Front-Yard", "There's a mysterious hole in the ground.", ['Back-Yard','Garage'], [], [], 10, 1))
+    adventure_map.add_room(Room("Mow Back", "You mow the back yard.")
+    #adventure_map.add_room(Room("Side-Yard", "Almost done mowing!!!", ['Back-Yard', 'Front-Yard'], [], time-10, ""))
 
     my_funds = 0
     parent_funds = 0
     current_gas = 0
+    remaining_time = 600
 #    Item_List = [[item, text when you add item to inventory, interact text1, interact text2]]
     Item_List = [["Note", "Hi kid, we just left, and you need to mow the lawn before we get home, or you are grounded. We'll be back at 6, so get moving!", ""], 
                 ["Wallet", "You pick up your wallet. You have $10 available.", f"You have ${my_funds} available."],
@@ -122,7 +138,12 @@ def main():
                 ["Car", "You have entered the car.", "The car is locked and you have no keys."],
                 ["Keys", "You have picked up a pair of keys.", "You have a pair of keys."],
                 ["Mower", "It is a mower that has not been used since last year. It has no gas in it.", "It is a mower that has recently been filled with gas."]]
-
+    Thirst_level = ["You are not thirsty.", "You are not thirsty.", "You are not thirsty.",
+                    "You are a bit thirsty.", "You are thirsty.", "You are very thirsty."]
+    # Every 30 minutes, you advance a level of thirst. Literally just print Thirst_level[floor(x)]
+    # Mowing a yard takes 30 minutes and advances 2 thirst levels
+    # Driving between locations takes 20 minutes and advances 2/3 of a thirst level
+    # Moving between house rooms takes 10 minutes and advances 1/3 of a thirst level
         #    ["Spark Plug", "You have purchased a spark plug.", "You cannot afford a spark plug.", "You have a spark plug."],
 
 # Have an outer loop of whether you want to play again
@@ -138,6 +159,11 @@ def main():
     Time_left = 600
     while Continue == "yes":
         Choice = input()
+        #check if input is: invalid, a room, or an item
+        #if invalid, ask for a different input
+        #if a room, change the current room,
+        #   subtract adventure_map.get_room(room_name).get_time from remaining time
+        #   subtract adventure_map.get_room(room_name).get_hydration from hydration
         Choice = Choice.title()
         if Choice == "pick up note":
             print(Note)
