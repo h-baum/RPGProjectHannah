@@ -1,6 +1,6 @@
 """
 Author:         Hannah Baum
-Date:           4/1/24
+Date:           4/20/24
 Assignment:     Project 2
 Course:         CPSC1051
 Lab Section:    SECTION 002
@@ -52,7 +52,7 @@ class ItemTracker:
         return self.map[itemname]
 
 class PlayerStatus:
-    def __init__(self, time = 190, hydration = 10):
+    def __init__(self, time = 250, hydration = 10):
         self.time = time
         self.hydration = hydration
     
@@ -76,7 +76,7 @@ class PlayerStatus:
         Thirst_text = ['You get water poisoning and pass out.', 'You are not thirsty.', 'You are a bit thirsty.', 'You are thirsty.', 'You are very thirsty.','You pass out from dehydration.']
         if self.time < 0:
             self.time = 0
-        if self.get_hydration() > 29:
+        if self.get_hydration() > 44:
             string_overall += f'You have 0 minutes left.\n'
             string_overall += Thirst_text[0]
         elif self.get_hydration() > 9:
@@ -166,7 +166,7 @@ class Wallet(SuperItem):
             string_overall += self.get_pickup_text()
         elif text_id == 2:
             string_overall += self.get_inventory_text()
-            string_overall += money_left
+            string_overall += str(money_left)
             string_overall += ' in it.'
         return string_overall
 
@@ -251,7 +251,7 @@ def main():
     adventure_map.add_room(Room("Master Bedroom", "Your parents keep their room clean and tidy. The beds are nicely made, the clothes are folded and put away. Maybe you could take some hints?", ['Kitchen', 'Bedroom'], [], ["Credit Card"], 10, 1))
     adventure_map.add_room(Room("Garage", "There's a car parked in the garage. There's some tools, ladders, and cobwebs against the walls.", ['Kitchen', 'Front Yard', 'Back Yard', 'Car'], ['Start Mowing'], ["Mower"], 10, 1))
     adventure_map.add_room(Room("Start Mowing", "You successfully start the mower.", ['Mow Front', 'Mow Back', 'Garage'], [], [], 10, 1))
-    adventure_map.add_room(Room("Car", "You get inside the vehicle.", ['Garage'], ['Boba Shop','Coffee Shop','Gas Station','Hardware Store'], [], 10, 1))
+    adventure_map.add_room(Room("Car", "You get inside the vehicle. If you have keys, it will be easy to drive.", ['Garage'], ['Boba Shop','Coffee Shop','Gas Station','Hardware Store'], [], 10, 1))
     #Outside locations
     adventure_map.add_room(Room("Boba Shop", "You drive to a shop stocked with all the delicious boba drinks you could imagine!!!", ['Garage', 'Coffee Shop', 'Gas Station','Hardware Store'], [], ['Boba Tea'], 20, 2))
     adventure_map.add_room(Room("Coffee Shop", "You drive to a shop stocked with many caffeinated drinks.", ['Garage', 'Boba Shop', 'Gas Station','Hardware Store'], [], ['Coffee'], 20, 2))
@@ -275,7 +275,7 @@ def main():
     item_tracker.add_item(Purchase('Boba Tea', 'Purchase Drink', 'You attempt to purchase a boba tea for $5.', 'You drink the boba tea, and feel refreshed.'))
     item_tracker.add_item(Purchase('Coffee', 'Purchase Drink', 'You attempt to purchase a coffee for $5.', 'You drink the coffee, and feel energized.'))
     item_tracker.add_item(Pickup('Keys', 'Pickup', 'You have picked up a key chain.', 'It is a key chain.'))
-    item_tracker.add_item(Pickup('Credit Card', 'Pickup', 'You take your parents credit card.', 'You wonder if they will notice.'))
+    item_tracker.add_item(Pickup('Credit Card', 'Pickup', 'You take your parents credit card.', 'You wonder if your parents will notice you took it.'))
     item_tracker.add_item(Pickup('Gas Receipt', 'Pickup Receipt', 'You pick up a receipt', 'It is a record of your purchase at the gas station.'))
     item_tracker.add_item(Pickup('Filter Receipt', 'Pickup Receipt', 'You pick up a receipt', 'It is a record of your purchase at the hardware store.'))
     item_tracker.add_item(Pickup('Boba Receipt', 'Pickup Receipt', 'You pick up a receipt', 'It is a record of your purchase at the boba shop.'))
@@ -315,9 +315,9 @@ def main():
     
     print("Welcome to Mow the Lawn! Do your best to mow the lawn today.\n")
     logger.info("Welcome to Mow the Lawn! Do your best to mow the lawn today.\n")
-    print("\n~~~~~~~~~~~~~~~~~")
-    print("You wake up in your room. Next to you there is note on the table next to the bed, as well as a cup of room-temperature water. It's currently noon, and you're feeling a bit thirsty.")
-    print("~~~~~~~~~~~~~~~~~")
+    print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    print("You wake up in your room. Next to you there is a note on the table next to the bed, as well as a cup of room-temperature water. It's currently noon, and you're feeling a bit thirsty.")
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     current_inventory = []
     current_room = 'Bedroom'
     print(adventure_map.get_room(current_room))
@@ -346,17 +346,25 @@ def main():
             print('Game over.')
             exit()
         elif current_status.get_time() <= 0:
-            print("You ran out of time. Your parents are pulling into the driveway. It's joever for you. Expect to be grounded for the next two weeks.")
+            print("You ran out of time. Your parents are pulling into the driveway. Expect to be grounded for the next two weeks.")
             print('Game over.')
             exit()
-        elif mowed_back + mowed_front == 2:
+        elif (mowed_back + mowed_front == 2):
             if 'Credit Card' in current_inventory and purchase_count != 0:
                 print('Congrats, you have mowed the lawn. However, you were immediately grounded when they found you took their credit card and were not able to prove what you spend it on.')
-                print('Ripbozo little man, do better next time and maybe your parents would be proud of you.')
+                print('You lost, do better next time and maybe your parents will be proud of you.')
+            elif 'Credit Card' in current_inventory and purchase_count == 0:
+                print('Congrats, you have mowed the lawn. While your parents were not happy with you for taking their card, you were able to calm them down when you showed them the receipts for your purchases.')
+                print('You win, but maybe things could have gone a little better.')
+            elif current_status.get_time() >= 60:
+                print('Congrats, you have mowed the lawn! Your parents were impressed with your speed and decided to reward you by paying for your next boba.')
+                print('You immediately went to the boba shop and bought yourself a lychee-flavored boba tea. Maybe it was worth doing your best for your parents.')
+                print('Good job! Keep it up.')
             else:
-                print('Congrats, you have mowed the lawn! What a good little man you are. Your dad might be proud of you for once.')
+                print('Congrats, you have mowed the lawn! Your parents are very happy.')
+                print('You Won!')
             exit()
-        
+
         print('\nWhat would you like to do?')
         tempchoice = input()
         Choice = tempchoice.title().strip()
@@ -368,32 +376,30 @@ def main():
             if Choice in adventure_map.get_room(current_room).get_exits():
                 if current_room == 'Gas Station' or current_room == 'Hardware Store' or current_room == 'Boba Shop' or current_room == 'Coffee Shop':
                     if Choice == 'Garage' and 'Wallet' not in current_inventory:
-                        print("\n~~~~~~~~~~~~~~~~~")
+                        print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
                         print('You got pulled over at a traffic stop on the way home and were found to be driving without a license.')
                         print('You did not pass go and did not collect 200 dollars, and were sent directly to jail.')
                         print('Game Over.')
-                        print("~~~~~~~~~~~~~~~~~")
+                        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
                         break
                 if Choice == 'Mow Front':
                     mowed_front = 1
                 elif Choice == 'Mow Back':
                     mowed_back = 1
                 current_room = Choice
-                print("\n~~~~~~~~~~~~~~~~~")
+                print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
                 print(adventure_map.get_room(current_room))
                 string_inventory = ""
                 for i in current_inventory:
                     string_inventory += f"{i}, "
                 string_inventory = string_inventory[:-2]
                 print(f'Items in inventory: {string_inventory}\n')
+                logger.info(f'Items in inventory: {string_inventory}\n')
                 current_status.update_time(adventure_map.get_room(current_room).get_time())
                 current_status.update_hydration(adventure_map.get_room(current_room).get_hydration())
                 print(current_status)
-                # if current_status.get_time() <= 0:
-                #     print("Game over. Water allergies don't exist, you know?")
-                #     exit()
-                # else:
-                #     print('\nWhat would you like to do?')
+                logger.info(current_status)
+                logger.info(f'{current_status.get_hydration()} is your water level.')
                 
 
             elif Choice in adventure_map.get_room(current_room).get_items():
@@ -427,8 +433,9 @@ def main():
                             adventure_map.get_room(current_room).add_items("Filter Receipt")
                 elif Choice == 'Keys':
                     adventure_map.get_room('Car').update_exits()
+                    logger.info('New exits have been added to the car.')
                 
-                print("\n~~~~~~~~~~~~~~~~~")
+                print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
                 if item_success == False:
                     print(item_tracker.get_item(Choice).displayinfo(1))
                     print("You cannot afford this item. Go search the house for some change?")
@@ -436,6 +443,7 @@ def main():
                     if 'Gas Can' in current_inventory and 'Air Filter' in current_inventory:
                         print(item_tracker.get_item(Choice).displayinfo(2))
                         adventure_map.get_room('Garage').update_exits()
+                        logger.info('New exit has been added to the garage.')
                         #clicking on the mower starts it if you have the required items
                     else:
                         print(item_tracker.get_item(Choice).displayinfo(1))
@@ -466,51 +474,23 @@ def main():
                 
                 if item_tracker.get_item(Choice).get_item_type == 'Pickup Receipt':
                     purchase_count -= 1
-                print("~~~~~~~~~~~~~~~~~")
+                print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
                 print(adventure_map.get_room(current_room))
                 string_inventory = ""
                 for i in current_inventory:
                     string_inventory += f"{i}, "
                 string_inventory = string_inventory[:-2]
                 print(f'Items in inventory: {string_inventory}\n')
+                logger.info(f'Items in inventory: {string_inventory}\n')
                 #current_status.update_time(adventure_map.get_room(current_room).get_time())
                 #current_status.update_hydration(adventure_map.get_room(current_room).get_hydration())
                 print(current_status)
                 # print('\nWhat would you like to do?')
-
-
-                # for i in range(len(Item_List)):
-                #     if Choice == Item_List[i][0]:
-                #         print("\n~~~~~~~~~~~~~~~~~")
-                #         if item_success == False:
-                #             print(Item_List[i][1])
-                #             print("You cannot afford this item. Go search the house for some change?")
-                #         elif Choice == 'Mower':
-                #             if 'Gas Can' in current_inventory and 'Air Filter' in current_inventory:
-                #                 print(Item_List[i][2])
-                #                 adventure_map.get_room('Garage').update_exits()
-                #             else:
-                #                 print(Item_List[i][1])
-                        
-                #         else:
-                #             print(Item_List[i][1])
-                #             adventure_map.get_room(current_room).update_items(Choice)
-                #             current_inventory.append(Choice)
-                #         print("~~~~~~~~~~~~~~~~~")
-                #         print(adventure_map.get_room(current_room))
-                #         string_inventory = ""
-                #         for i in current_inventory:
-                #             string_inventory += f"{i}, "
-                #         string_inventory = string_inventory[:-2]
-                #         print(f'Items in inventory:{string_inventory}\n')
-                #         #current_status.update_time(adventure_map.get_room(current_room).get_time())
-                #         #current_status.update_hydration(adventure_map.get_room(current_room).get_hydration())
-                #         print(current_status)
-                #         print('\nWhat would you like to do?')
-
+                logger.info(current_status)
+                logger.info(f'{current_status.get_hydration()} is your water level.')
 
             elif Choice in current_inventory:
-                print("\n~~~~~~~~~~~~~~~~~")
+                print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
                 if Choice == 'Wallet':
                     print(item_tracker.get_item(Choice).displayinfo(2, money_left))
                 elif item_tracker.get_item(Choice).get_item_type() == 'Purchase Drink' or item_tracker.get_item(Choice).get_item_type() == 'Pickup Drink':
@@ -519,59 +499,32 @@ def main():
                     current_status.update_hydration(-15)
                 else:
                     print(item_tracker.get_item(Choice).displayinfo(2))
-                print("~~~~~~~~~~~~~~~~~")
+                print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
                 print(adventure_map.get_room(current_room))
                 string_inventory = ""
                 for i in current_inventory:
                     string_inventory += f"{i}, "
                 string_inventory = string_inventory[:-2]
                 print(f'Items in inventory: {string_inventory}\n')
+                logger.info(f'Items in inventory: {string_inventory}\n')
                 #current_status.update_time(adventure_map.get_room(current_room).get_time())
                 #current_status.update_hydration(adventure_map.get_room(current_room).get_hydration())
                 print(current_status)
+                logger.info(current_status)
+                logger.info(f'{current_status.get_hydration()} is your water level.')
                 
-
-
-                # for i in range(len(Item_List)):
-                #     if Choice == Item_List[i][0]:
-                #         print("\n~~~~~~~~~~~~~~~~~")
-                #         if Choice == 'Wallet':
-                #             print(f'{Item_List[i][2]}{money_left} in it.')
-                #         else:
-                #             print(Item_List[i][2])
-                #         print("~~~~~~~~~~~~~~~~~")
-                #         print(adventure_map.get_room(current_room))
-                #         string_inventory = ""
-                #         for i in current_inventory:
-                #             string_inventory += f"{i}, "
-                #         string_inventory = string_inventory[:-2]
-                #         print(f'Items in inventory: {string_inventory}\n')
-                #         #current_status.update_time(adventure_map.get_room(current_room).get_time())
-                #         #current_status.update_hydration(adventure_map.get_room(current_room).get_hydration())
-                #         print(current_status)
-                #         print('\nWhat would you like to do?')
-
-
-
         except NotFoundError:
             print(NotFoundError(Choice))
-
-
-#things to add:
-#time and hydration right after room readout. should be like:
-#you have xx minutes left and you are feeling thirsty
-#if you took parents credit at all, you need to make sure you have all your receipts
-#need to actually win
-# add output log
-# add one more class
+            logger.warning(NotFoundError(Choice))
 
 
 
 #STILL TO DO:
-#FIX DA LOGS !!!!!!!!!
+#FIX THE LOGS !!!!!!!!!
 #also clear out log file
 #also fix comments
 #make sure we got a readme
+
 
 
 if __name__ == "__main__":
