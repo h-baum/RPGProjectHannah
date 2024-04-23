@@ -5,11 +5,15 @@ Assignment:     Project 2
 Course:         CPSC1051
 Lab Section:    SECTION 002
 
-CODE DESCRIPTION: 
+CODE DESCRIPTION: This code runs a text-based RPG game. The goal is to mow the lawn before your parents get home.
+There are 5 ways to lose the game. You can pass out from dehydration, run out of time, drive without a license then go to jail, 
+drink too much and get water poisoning, or take your parents credit card and don't have all the receipts for your purchases.
+There are 3 win messages. One is when you speedrun the game and make no/almost no extra moves (Best Ending), another is when you finish the game in time
+but make several unnecessary moves without using the credit card, and the last is when you take the credit card so you spend your parents money, and you show the receipts.
 
 
 """
-import logging, time
+import logging
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(filename='mowthelawn.log', level=logging.DEBUG)
@@ -105,10 +109,13 @@ class SuperItem:
 
     def get_name(self):
         return self.name
+
     def get_item_type(self):
         return self.item_type
+
     def get_pickup_text(self):
         return self.pickup_text
+        
     def get_inventory_text(self):
         return self.inventory_text
     #def __str__(self, pickup_id):
@@ -251,7 +258,7 @@ def main():
     adventure_map.add_room(Room("Master Bedroom", "Your parents keep their room clean and tidy. The beds are nicely made, the clothes are folded and put away. Maybe you could take some hints?", ['Kitchen', 'Bedroom'], [], ["Credit Card"], 10, 1))
     adventure_map.add_room(Room("Garage", "There's a car parked in the garage. There's some tools, ladders, and cobwebs against the walls.", ['Kitchen', 'Front Yard', 'Back Yard', 'Car'], ['Start Mowing'], ["Mower"], 10, 1))
     adventure_map.add_room(Room("Start Mowing", "You successfully start the mower.", ['Mow Front', 'Mow Back', 'Garage'], [], [], 10, 1))
-    adventure_map.add_room(Room("Car", "You get inside the vehicle. If you have keys, it will be easy to drive.", ['Garage'], ['Boba Shop','Coffee Shop','Gas Station','Hardware Store'], [], 10, 1))
+    adventure_map.add_room(Room("Car", "You get inside the vehicle. If you have keys, you can drive to many places.", ['Garage'], ['Boba Shop','Coffee Shop','Gas Station','Hardware Store'], [], 10, 1))
     #Outside locations
     adventure_map.add_room(Room("Boba Shop", "You drive to a shop stocked with all the delicious boba drinks you could imagine!!!", ['Garage', 'Coffee Shop', 'Gas Station','Hardware Store'], [], ['Boba Tea'], 20, 2))
     adventure_map.add_room(Room("Coffee Shop", "You drive to a shop stocked with many caffeinated drinks.", ['Garage', 'Boba Shop', 'Gas Station','Hardware Store'], [], ['Coffee'], 20, 2))
@@ -275,7 +282,7 @@ def main():
     item_tracker.add_item(Purchase('Boba Tea', 'Purchase Drink', 'You attempt to purchase a boba tea for $5.', 'You drink the boba tea, and feel refreshed.'))
     item_tracker.add_item(Purchase('Coffee', 'Purchase Drink', 'You attempt to purchase a coffee for $5.', 'You drink the coffee, and feel energized.'))
     item_tracker.add_item(Pickup('Keys', 'Pickup', 'You have picked up a key chain.', 'It is a key chain.'))
-    item_tracker.add_item(Pickup('Credit Card', 'Pickup', 'You take your parents credit card.', 'You wonder if your parents will notice you took it.'))
+    item_tracker.add_item(Pickup('Credit Card', 'Pickup', 'You take your parents credit card.', 'You wonder if your parents will notice you took it. Oh well, you are going to use it for all your purchases. Surely it will be fine.'))
     item_tracker.add_item(Pickup('Gas Receipt', 'Pickup Receipt', 'You pick up a receipt', 'It is a record of your purchase at the gas station.'))
     item_tracker.add_item(Pickup('Filter Receipt', 'Pickup Receipt', 'You pick up a receipt', 'It is a record of your purchase at the hardware store.'))
     item_tracker.add_item(Pickup('Boba Receipt', 'Pickup Receipt', 'You pick up a receipt', 'It is a record of your purchase at the boba shop.'))
@@ -283,25 +290,10 @@ def main():
     item_tracker.add_item(Wallet('Wallet', 'Pickup', 'You pick up your wallet. It has $10 in it as well as your license.', 'It is a wallet with your license and $'))
     item_tracker.add_item(Permanent('Mower', 'Permanent', 'You try to start the mower, but nothing happens. Maybe it needs something.','You fill the mower with gas and replace the air filter, and it starts! Congratulations, better start mowing.'))
     item_tracker.add_item(Permanent('Grab Water', 'Permanent', 'You take a water bottle from the fridge.', 'You already have one, so what are you doing?'))
-    item_tracker.add_item(Pickup('Note', 'Pickup', 'It is a note that says, "Hi kid, we just left, and you need to mow the lawn before we get home, or you are grounded. We will be back in the afternoon, so get moving!"', 'It is a note that says, "Hi kid, we just left, and you need to mow the lawn before we get home, or you are grounded. We will be back in the afternoon, so get moving!"'))
+    item_tracker.add_item(Pickup('Note', 'Pickup', 'It is a note that says, "Hi kid, we just left, and you need to mow the lawn before we get home, or you are grounded. We will be back at 4pm, so get moving!"', 'The note says, "Hi kid, we just left, and you need to mow the lawn before we get home, or you are grounded. We will be back at 4pm, so get moving!"'))
     item_tracker.add_item(Pickup('Water Bottle', 'Pickup Drink', '', 'You drink the water. Gotta stay hydrated.'))
     item_tracker.add_item(Pickup('Stale Water', 'Instant Drink', 'You drink the stale water. Better than nothing.', ''))
 
-    # Item_List = [['Gas Can','You attempt to purchase a can of gas for $5.','It is a can of gas.'],
-    #             ['Air Filter', 'You attempt to purchase an air filter for $5.','It is an air filter.'],
-    #             ['Keys', 'You have picked up a key chain.', 'It is a key chain.'],
-    #             ['Boba Tea', 'You attempt to purchase a boba tea for $5.', 'You drink the boba tea, and feel refreshed.'],
-    #             ['Coffee', 'You attempt to purchase a coffee for $5.', 'You drink the coffee, and feel energized.'],
-    #             ['Water Bottle', 'You pick up a water bottle.', 'You drink the water. Gotta stay hydrated.'],
-    #             ['Stale Water', 'You drink the stale water. Better than nothing.', ''],
-    #             ['Wallet', 'You pick up your wallet. It has $10 in it as well as your license.', 'It is a wallet with your license and $'],
-    #             ['Credit Card', 'You take your parents credit card.', 'You wonder if they will notice.'],
-    #             ['Gas Receipt', 'You pick up a receipt', 'It is a record of your purchase at the gas station.'],
-    #             ['Filter Receipt', 'You pick up a receipt', 'It is a record of your purchase at the hardware store.'],
-    #             ['Boba Receipt', 'You pick up a receipt', 'It is a record of your purchase at the boba shop.'],
-    #             ['Coffee Receipt', 'You pick up a receipt', 'It is a record of your purchase at the coffee shop.'],
-    #             ['Mower', 'You try to start the mower, but nothing happens. Maybe it needs something.','You fill the mower with gas and replace the air filter, and it starts! Congratulations, better start mowing.'],
-    #             ['Note','It is a note that says, "Hi kid, we just left, and you need to mow the lawn before we get home, or you are grounded. We will be back at 5, so get moving!"', 'It is a note that says, "Hi kid, we just left, and you need to mow the lawn before we get home, or you are grounded. We will be back at 5, so get moving!"']]
     #would you like to purchase: purchase iff: gas can, air filter, boba tea, coffee
     # gas can added to inventory
     #iff wallet, moneyleft+10, iff credit card, moneyleft+2000
@@ -342,27 +334,40 @@ def main():
     mowed_back = 0
     Continue = True
     while Continue == True:
-        if current_status.get_hydration() <= 0 or current_status.get_hydration() >= 30:
+        if current_status.get_hydration() <= 0 or current_status.get_hydration() >= 44: 
             print('Game over.')
             exit()
+            logger.info('Game over.')
         elif current_status.get_time() <= 0:
             print("You ran out of time. Your parents are pulling into the driveway. Expect to be grounded for the next two weeks.")
             print('Game over.')
             exit()
+            logger.info("You ran out of time. Your parents are pulling into the driveway. Expect to be grounded for the next two weeks.")
+            logger.info('Game over.')
         elif (mowed_back + mowed_front == 2):
+            #print(purchase_count)
             if 'Credit Card' in current_inventory and purchase_count != 0:
                 print('Congrats, you have mowed the lawn. However, you were immediately grounded when they found you took their credit card and were not able to prove what you spend it on.')
                 print('You lost, do better next time and maybe your parents will be proud of you.')
+                logger.info('Congrats, you have mowed the lawn. However, you were immediately grounded when they found you took their credit card and were not able to prove what you spend it on.')
+                logger.info('You lost, do better next time and maybe your parents will be proud of you.')
             elif 'Credit Card' in current_inventory and purchase_count == 0:
                 print('Congrats, you have mowed the lawn. While your parents were not happy with you for taking their card, you were able to calm them down when you showed them the receipts for your purchases.')
                 print('You win, but maybe things could have gone a little better.')
+                logger.info('Congrats, you have mowed the lawn. While your parents were not happy with you for taking their card, you were able to calm them down when you showed them the receipts for your purchases.')
+                logger.info('You win, but maybe things could have gone a little better.')
             elif current_status.get_time() >= 60:
                 print('Congrats, you have mowed the lawn! Your parents were impressed with your speed and decided to reward you by paying for your next boba.')
                 print('You immediately went to the boba shop and bought yourself a lychee-flavored boba tea. Maybe it was worth doing your best for your parents.')
                 print('Good job! Keep it up.')
+                logger.info('Congrats, you have mowed the lawn! Your parents were impressed with your speed and decided to reward you by paying for your next boba.')
+                logger.info('You immediately went to the boba shop and bought yourself a lychee-flavored boba tea. Maybe it was worth doing your best for your parents.')
+                logger.info('Good job! Keep it up.')
             else:
                 print('Congrats, you have mowed the lawn! Your parents are very happy.')
                 print('You Won!')
+                logger.info('Congrats, you have mowed the lawn! Your parents are very happy.')
+                logger.info('You Won!')
             exit()
 
         print('\nWhat would you like to do?')
@@ -472,7 +477,7 @@ def main():
                     current_inventory.append(Choice)
                     #every other item goes in your inventory
                 
-                if item_tracker.get_item(Choice).get_item_type == 'Pickup Receipt':
+                if item_tracker.get_item(Choice).get_item_type() == 'Pickup Receipt':
                     purchase_count -= 1
                 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
                 print(adventure_map.get_room(current_room))
@@ -517,14 +522,11 @@ def main():
             print(NotFoundError(Choice))
             logger.warning(NotFoundError(Choice))
 
-
-
 #STILL TO DO:
 #FIX THE LOGS !!!!!!!!!
 #also clear out log file
 #also fix comments
 #make sure we got a readme
-
 
 
 if __name__ == "__main__":
