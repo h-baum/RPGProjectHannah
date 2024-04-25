@@ -6,83 +6,112 @@ Course:         CPSC1051
 Lab Section:    SECTION 002
 
 CODE DESCRIPTION: This code runs a text-based RPG game. The goal is to mow the lawn before your parents get home.
-There are 5 ways to lose the game. You can pass out from dehydration, run out of time, drive without a license then go to jail, 
+There are 5 ways to lose the game. You can pass out from dehydration, run out of time, drive without your wallet, 
 drink too much and get water poisoning, or take your parents credit card and don't have all the receipts for your purchases.
 There are 3 win messages. One is when you speedrun the game and make no/almost no extra moves (Best Ending), another is when you finish the game in time
 but make several unnecessary moves without using the credit card, and the last is when you take the credit card so you spend your parents money, and you show the receipts.
-
-
+Your next move can be selecting an item in the room, an item in your inventory, or an exit.
+Drinks go straight to your inventory when selected from the room and can be drunk (selected) at any later time in the game.
+The only exception to that is the stale water, which will be drunk immediately and serves the purpose of letting you start not being a little bit thirsty. 
+It's not necessary, but it also shows you how drinking water changes your thirst level.
+Any non-drink in your inventory will read a description when you select it.
+If you go to the mower without gas can and air filter, mower will not start. 
+If you go to the car without keys, you can not go from your car to any of the shops.
+If you are walking from room to room, it takes 10 minutes and hydration goes down by 1.
+Driving from room to room takes 20 minutes, and hydration goes down by 1.
+Mowing from room to room takes 30 minutes, and hydration goes down by 3.
+You start the game with hydration of 10. Drinking anything increases hydration by 15, except for stale water which only increases hydration by 5.
+You start the game with 240 minutes. 
+Interacting with items in room or inventory does not decrease time or hydration, only moving rooms does. 
+Mower is a permanent item in the garage, but it unlocks start mowing exit if you have the correct items in your inventory.
+It is possible to pass out or run out of time as you are finishing mowing, and if that happens, you lose. 
 """
-import logging
 
+#import the logging module
+import logging
+#sets up logging so that status and inventory can be tracked throughout program
 logger = logging.getLogger(__name__)
 logging.basicConfig(filename='mowthelawn.log', level=logging.DEBUG)
-#logging.basicConfig(format='%(asctime)s %(message)s')
-logger.info('\nThis is the log file for mow the lawn. It should track every user input and every print')
+logger.info('Start of Log for new game')
+logger.info('This is the log file for mow the lawn. It should track every user input and every print()')
 
-#logging.basicConfig(format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
-# logging.basicConfig(
-#     format='%(asctime)s %(levelname)-8s %(message)s',
-#     level=logging.INFO,
-#     datefmt='%Y-%m-%d %H:%M:%S')
-# logging.warning('is when this event was logged.')
-
+#exception class that displays a message whenever the user input is not in valid exits, items in room, or items in inventory
 class NotFoundError(Exception):
-    def __init__(self, room_name, message = "Room or Item not found. Please try again."):
-        self.room_name = room_name
+    def __init__(self, choice, message = "Room or Item not found. Please try again."):
+    #initializes the exception's message and user input
+        self.choice = choice
         self.message = message
 
+    #returns a string containing the invalid input and the error message
     def __str__(self):
-        return f"{self.room_name} -> {self.message}"
+        return f"{self.choice} -> {self.message}"
 
+#AdventureMap class that has the attribute map as a dictionary
 class AdventureMap:
     def __init__(self):
+    #initializes the map
         self.map = {}
 
+    #adds the room to the map dictionary
     def add_room(self, room):
         self.map[room.name] = room
 
+    #returns the room in the map
     def get_room(self, room_name):
         return self.map[room_name]
 
+#ItemTracker class that has the attribute map as a dictionary
 class ItemTracker:
     def __init__(self):
+    #initializes the map
         self.map = {}
     
+    #adds the item to the map
     def add_item(self, itemname):
         self.map[itemname.name] = itemname
     
+    #returns the item in the map
     def get_item(self, itemname):
         return self.map[itemname]
 
+#PlayerStatus class that has the attributes time and hydration
 class PlayerStatus:
-    def __init__(self, time = 250, hydration = 10):
+    def __init__(self, time = 240, hydration = 9):
+        #initializes player's time left and hydration level
         self.time = time
         self.hydration = hydration
     
+    #returns the time left
     def get_time(self):
         return self.time
     
+    #returns the hydration level
     def get_hydration(self):
         return self.hydration
 
+    #update the time based on the time changing from room to room, return the current time left
     def update_time(self, incoming_time):
         self.time = self.get_time() - incoming_time
         return self.time
     
+    #update the hydration based on the time changing from room to room, return the current hydratio level
     def update_hydration(self, incoming_hydration):
         self.hydration = self.get_hydration() - incoming_hydration
         return self.hydration
 
+    # returns a string containng player's time left and hydration status, updating with each room change
     def __str__(self):
         string_overall = ''
-        #string_overall += f'You have {self.time} minutes left.\n'
+        # list containing the different levels of thirst
         Thirst_text = ['You get water poisoning and pass out.', 'You are not thirsty.', 'You are a bit thirsty.', 'You are thirsty.', 'You are very thirsty.','You pass out from dehydration.']
+        # time cannot be negative
         if self.time < 0:
             self.time = 0
+        # when the hydration level is greater than 45, tell player they are out of time and got water poisoning 
         if self.get_hydration() > 44:
             string_overall += f'You have 0 minutes left.\n'
             string_overall += Thirst_text[0]
+        # when the hydration level is between 1 and 44, tell player how much time they have left and their hydration status
         elif self.get_hydration() > 9:
             string_overall += f'You have {self.time} minutes left.\n'
             string_overall += Thirst_text[1]
@@ -95,11 +124,14 @@ class PlayerStatus:
         elif self.get_hydration() > 0:
             string_overall += f'You have {self.time} minutes left.\n'
             string_overall += Thirst_text[4]
+        # when hydration level is 0, tell player they are out of time and they passed out from dehydration
         else:
             string_overall += f'You have 0 minutes left.\n'
             string_overall += Thirst_text[5]
         return string_overall
 
+# SuperItem class with the attributes name, itemtype, pickuptext, and inventorytext
+# This class 
 class SuperItem:
     def __init__(self, name, itemtype, pickuptext, inventorytext):
         self.name = name
@@ -118,10 +150,7 @@ class SuperItem:
         
     def get_inventory_text(self):
         return self.inventory_text
-    #def __str__(self, pickup_id):
-    #    string_overall = ''
-    #    string_overall += self.name
-    #    return string_overall
+    
 
 class Purchase(SuperItem):
     def __init__(self, name, itemtype, pickuptext, inventorytext):
@@ -249,9 +278,11 @@ class Room:
 
 
 def main():
+    #calls map and status classes
     adventure_map = AdventureMap()
     current_status = PlayerStatus()
     #room: name, description, [exits], [unlockable exits], [items], time, hydration
+    #adds the rooms to the map
     #House rooms
     adventure_map.add_room(Room("Bedroom", "A messy room that desparately needs organizing and cleaning. At least nothing is growing, I think?", ['Kitchen', 'Master Bedroom'], [], ["Note", "Wallet", "Stale Water"], 10, 1))
     adventure_map.add_room(Room("Kitchen", "A room with a leaky sink and an near-empty fridge, containing only several water bottles.", ['Garage', 'Master Bedroom', 'Bedroom'], [], ["Grab Water", "Keys"], 10, 1))
@@ -270,17 +301,21 @@ def main():
     adventure_map.add_room(Room("Mow Back", "You mow the back yard.", ['Mow Front', 'Garage'], [], [], 30, 5))
     adventure_map.add_room(Room("Mow Front", "You mow the front yard.", ['Mow Back', 'Garage'], [], [], 30, 5))
 
-    #time_left = 300
+    # intiailize amount of money left and number of purchases
     money_left = 0
     purchase_count = 0
-    #total_money = 0
-    #item: name, pickup, interact
 
+    #calls item tracker classes
     item_tracker = ItemTracker()
+
+    #item: name, type of item, pickup text, interact text
+    #non-drinkable, purchasable item, enters inventory
     item_tracker.add_item(Purchase('Gas Can','Purchase Item','You attempt to purchase a can of gas for $5.','It is a can of gas.'))
     item_tracker.add_item(Purchase('Air Filter', 'Purchase Item', 'You attempt to purchase an air filter for $5.','It is an air filter.'))
+    #drinkable, purchasable item, enters inventory
     item_tracker.add_item(Purchase('Boba Tea', 'Purchase Drink', 'You attempt to purchase a boba tea for $5.', 'You drink the boba tea, and feel refreshed.'))
     item_tracker.add_item(Purchase('Coffee', 'Purchase Drink', 'You attempt to purchase a coffee for $5.', 'You drink the coffee, and feel energized.'))
+    #enters inventory
     item_tracker.add_item(Pickup('Keys', 'Pickup', 'You have picked up a key chain.', 'It is a key chain.'))
     item_tracker.add_item(Pickup('Credit Card', 'Pickup', 'You take your parents credit card.', 'You wonder if your parents will notice you took it. Oh well, you are going to use it for all your purchases. Surely it will be fine.'))
     item_tracker.add_item(Pickup('Gas Receipt', 'Pickup Receipt', 'You pick up a receipt', 'It is a record of your purchase at the gas station.'))
@@ -288,97 +323,117 @@ def main():
     item_tracker.add_item(Pickup('Boba Receipt', 'Pickup Receipt', 'You pick up a receipt', 'It is a record of your purchase at the boba shop.'))
     item_tracker.add_item(Pickup('Coffee Receipt', 'Pickup Receipt', 'You pick up a receipt', 'It is a record of your purchase at the coffee shop.'))
     item_tracker.add_item(Wallet('Wallet', 'Pickup', 'You pick up your wallet. It has $10 in it as well as your license.', 'It is a wallet with your license and $'))
+    item_tracker.add_item(Pickup('Note', 'Pickup', 'It is a note that says, "Hi kid, we just left, and you need to mow the lawn before we get home, or you are grounded. We will be back at 4pm, so get moving!"', 'The note says, "Hi kid, we just left, and you need to mow the lawn before we get home, or you are grounded. We will be back at 4pm, so get moving!"'))
+    item_tracker.add_item(Pickup('Water Bottle', 'Pickup Drink', '', 'You drink the water. Gotta stay hydrated.'))    
+    #permanently in the room, even after being interacted with, it stays in the room for future interactions, never enters inventory
     item_tracker.add_item(Permanent('Mower', 'Permanent', 'You try to start the mower, but nothing happens. Maybe it needs something.','You fill the mower with gas and replace the air filter, and it starts! Congratulations, better start mowing.'))
     item_tracker.add_item(Permanent('Grab Water', 'Permanent', 'You take a water bottle from the fridge.', 'You already have one, so what are you doing?'))
-    item_tracker.add_item(Pickup('Note', 'Pickup', 'It is a note that says, "Hi kid, we just left, and you need to mow the lawn before we get home, or you are grounded. We will be back at 4pm, so get moving!"', 'The note says, "Hi kid, we just left, and you need to mow the lawn before we get home, or you are grounded. We will be back at 4pm, so get moving!"'))
-    item_tracker.add_item(Pickup('Water Bottle', 'Pickup Drink', '', 'You drink the water. Gotta stay hydrated.'))
+    #never enters inventory, immediately gone from room upon interaction
     item_tracker.add_item(Pickup('Stale Water', 'Instant Drink', 'You drink the stale water. Better than nothing.', ''))
 
-    #would you like to purchase: purchase iff: gas can, air filter, boba tea, coffee
-    # gas can added to inventory
-    #iff wallet, moneyleft+10, iff credit card, moneyleft+2000
-    #   you purchase x
-    #   you do not have enough money
-    #   you do not have enough money, so you use your parents credit card
-    #thirst_text[0]:hydration_level 45+, [1]:12+, [2]:9+, [3]:6+, [4]:3+, [5]:else
-    #Thirst_text = ['You get water poisoning and pass out.','You are not thirsty.', 'You are a bit thirsty.', 'You are thirsty.', 'You are very thirsty.','You pass out from dehydration.']
-    #hydration_level = 9
-    #status 
-    
+    #prints and logs opening lines
     print("Welcome to Mow the Lawn! Do your best to mow the lawn today.\n")
     logger.info("Welcome to Mow the Lawn! Do your best to mow the lawn today.\n")
     print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     print("You wake up in your room. Next to you there is a note on the table next to the bed, as well as a cup of room-temperature water. It's currently noon, and you're feeling a bit thirsty.")
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    #initializes inventory as a list
     current_inventory = []
+    #intializes room
     current_room = 'Bedroom'
+    #tells user room description
     print(adventure_map.get_room(current_room))
+    #initializes inventory as a string
     string_inventory = ""
+    #adds list of items from inventory to string, gets rid of final comma
     for i in current_inventory:
         string_inventory += f"{i}, "
     string_inventory = string_inventory[:-2]
+    #tells user and logs their items in inventory
     print(f'Items in inventory: {string_inventory}\n')
     logger.info(f'Items in inventory: {string_inventory}\n')
-    current_status.update_time(adventure_map.get_room(current_room).get_time())
-    current_status.update_hydration(adventure_map.get_room(current_room).get_hydration())
+    #tells user and logs their current status based on time left and hydration level
     print(current_status)
     logger.info(current_status)
-    logger.info(f'{current_status.get_hydration()} is your water level.')
-    # print('\nWhat would you like to do?')
+    logger.info(f'Hydration level:{current_status.get_hydration()}')
+
     #if player types room name, update current room, loop
     #if player types room item name, print item pickup line, loop
     #   room.update item, also room.update exits
     #if player types inventory item name, print item interact line, loop
-    #   buncha if statements :')
+
+    #initially, player has not mowed the front or back yard
     mowed_front = 0
     mowed_back = 0
     Continue = True
+    #game continues as long as player has not won or lost, can not lose based on player input
     while Continue == True:
+        #when player's hydration goes to 0 or above 45, the game is over (LOSS 1,2)
         if current_status.get_hydration() <= 0 or current_status.get_hydration() >= 44: 
             print('Game over.')
+            print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
             exit()
             logger.info('Game over.')
+        #when player's time runs out, the game is over (LOSS 3)
         elif current_status.get_time() <= 0:
+            print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
             print("You ran out of time. Your parents are pulling into the driveway. Expect to be grounded for the next two weeks.")
             print('Game over.')
+            print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
             exit()
             logger.info("You ran out of time. Your parents are pulling into the driveway. Expect to be grounded for the next two weeks.")
             logger.info('Game over.')
+        #when the player has mowed both the front and back yard (completed the game), end the program
         elif (mowed_back + mowed_front == 2):
-            #print(purchase_count)
+            #when player has credit card and does not have receipts for all their purchases, they lose (LOSS 4)
             if 'Credit Card' in current_inventory and purchase_count != 0:
+                print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
                 print('Congrats, you have mowed the lawn. However, you were immediately grounded when they found you took their credit card and were not able to prove what you spend it on.')
                 print('You lost, do better next time and maybe your parents will be proud of you.')
+                print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
                 logger.info('Congrats, you have mowed the lawn. However, you were immediately grounded when they found you took their credit card and were not able to prove what you spend it on.')
                 logger.info('You lost, do better next time and maybe your parents will be proud of you.')
+            #when player has credit card and has receipts for all their purchases at the end of game, they win (WIN 1)
             elif 'Credit Card' in current_inventory and purchase_count == 0:
+                print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
                 print('Congrats, you have mowed the lawn. While your parents were not happy with you for taking their card, you were able to calm them down when you showed them the receipts for your purchases.')
                 print('You win, but maybe things could have gone a little better.')
+                print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
                 logger.info('Congrats, you have mowed the lawn. While your parents were not happy with you for taking their card, you were able to calm them down when you showed them the receipts for your purchases.')
                 logger.info('You win, but maybe things could have gone a little better.')
+            #when player still has at least 60 minutes left at the end of the game, they win (WIN 2)(BEST ENDING)
             elif current_status.get_time() >= 60:
+                print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
                 print('Congrats, you have mowed the lawn! Your parents were impressed with your speed and decided to reward you by paying for your next boba.')
                 print('You immediately went to the boba shop and bought yourself a lychee-flavored boba tea. Maybe it was worth doing your best for your parents.')
                 print('Good job! Keep it up.')
+                print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
                 logger.info('Congrats, you have mowed the lawn! Your parents were impressed with your speed and decided to reward you by paying for your next boba.')
                 logger.info('You immediately went to the boba shop and bought yourself a lychee-flavored boba tea. Maybe it was worth doing your best for your parents.')
                 logger.info('Good job! Keep it up.')
+            #when player has reached the end of game and not met either of other endings, final win message (WIN 3)
             else:
+                print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
                 print('Congrats, you have mowed the lawn! Your parents are very happy.')
                 print('You Won!')
+                print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
                 logger.info('Congrats, you have mowed the lawn! Your parents are very happy.')
                 logger.info('You Won!')
             exit()
 
+        #ask the user to input what they want to do next, fix capitalization and remove trailing whitespace
         print('\nWhat would you like to do?')
         tempchoice = input()
         Choice = tempchoice.title().strip()
-        logger.info(f'User input is {tempchoice} -> {Choice}.')
+        logger.info(f'User input: {tempchoice} -> {Choice}.')
 
         try:
+            #raise custom exception class when user inputs an option that is not a valid exit or valid item in room/inventory
             if (Choice not in adventure_map.get_room(current_room).get_exits()) and (Choice not in adventure_map.get_room(current_room).get_items()) and (Choice not in current_inventory):
                 raise NotFoundError(Choice)
+            #user chooses an exit
             if Choice in adventure_map.get_room(current_room).get_exits():
+                #if the player drives to a shop without their wallet, the game ends
                 if current_room == 'Gas Station' or current_room == 'Hardware Store' or current_room == 'Boba Shop' or current_room == 'Coffee Shop':
                     if Choice == 'Garage' and 'Wallet' not in current_inventory:
                         print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
@@ -387,47 +442,57 @@ def main():
                         print('Game Over.')
                         print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
                         break
+                #if the player mows the front yard, half of criteria for winning met
                 if Choice == 'Mow Front':
                     mowed_front = 1
+                #if the player mows the front yard, half of criteria for winning met
                 elif Choice == 'Mow Back':
                     mowed_back = 1
+                #set current room as choice
                 current_room = Choice
                 print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+                #tell player the description of the room
                 print(adventure_map.get_room(current_room))
+                #initialize inventory as string
                 string_inventory = ""
+                #add items from inventory list to inventory string, delete final comma 
                 for i in current_inventory:
                     string_inventory += f"{i}, "
                 string_inventory = string_inventory[:-2]
+                #print out and log the items in player's inventory
                 print(f'Items in inventory: {string_inventory}\n')
                 logger.info(f'Items in inventory: {string_inventory}\n')
+                #update player's status, based on changes in time remaining and hydration levels
                 current_status.update_time(adventure_map.get_room(current_room).get_time())
                 current_status.update_hydration(adventure_map.get_room(current_room).get_hydration())
+                #tell user and log their status
                 print(current_status)
                 logger.info(current_status)
-                logger.info(f'{current_status.get_hydration()} is your water level.')
+                logger.info(f'Hydration level: {current_status.get_hydration()}')
                 
-
+            #user chooses an item in the room
             elif Choice in adventure_map.get_room(current_room).get_items():
+                #signifies whether user can afford item
                 item_success = True
+                #when user picks up wallet, there are 10 dollars in it initially
                 if Choice == 'Wallet':
                     money_left += 10
-                    #total_money += 10
-                    #adventure_map.get_room(current_room).add_items("testy guy")
-                #elif Choice == 'Credit Card':
-                    #total_money += 2000
+                #when user buys something from a shop, they lose 5 dollars as long as they can afford it
                 elif Choice == 'Boba Tea' or Choice == 'Coffee' or Choice == 'Gas Can' or Choice == 'Air Filter':
+                    #if they have at least 5 dollars, they successfully buy the item
                     if money_left >= 5:
                         money_left -= 5
                         item_success = True
+                    #when user has a credit card, you can buy everything because there's 2000 dollars on it 
                     elif 'Credit Card' in current_inventory:
                         item_success = True
-                    #    total_money -= 5
-                    #elif total_money >= 5:
-                    #    total_money -= 5
+                    #when user can't afford it, they do not succesully purchase the item
                     else:
                         item_success = False
+                    #when they successfully purchase an item, update number of purchases 
                     if item_success == True:
                         purchase_count += 1
+                        #add the item's receipt to the room where they just bought an item, they can pick this up
                         if Choice == 'Boba Tea':
                             adventure_map.get_room(current_room).add_items("Boba Receipt")
                         elif Choice == 'Coffee':
@@ -436,14 +501,17 @@ def main():
                             adventure_map.get_room(current_room).add_items("Gas Receipt")
                         elif Choice == 'Air Filter':
                             adventure_map.get_room(current_room).add_items("Filter Receipt")
+                #if user picks up keys, the shops are now able to be driven from the car
+                #before this, if the user was in the car, they could only exit to the garage
                 elif Choice == 'Keys':
                     adventure_map.get_room('Car').update_exits()
                     logger.info('New exits have been added to the car.')
-                
                 print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+                #if the user does not have enough money for the item, tell them they don't have enough and to find more
                 if item_success == False:
                     print(item_tracker.get_item(Choice).displayinfo(1))
                     print("You cannot afford this item. Go search the house for some change?")
+                #when the user chooses the mower, it can either unlock start mowing or just prints message saying they are missing something
                 elif Choice == 'Mower':
                     if 'Gas Can' in current_inventory and 'Air Filter' in current_inventory:
                         print(item_tracker.get_item(Choice).displayinfo(2))
@@ -457,28 +525,30 @@ def main():
                     print(item_tracker.get_item(Choice).displayinfo(1))
                     current_status.update_hydration(-5)
                     adventure_map.get_room(current_room).update_items(Choice)
-                    #stale water cannot be put in inventory so it gets immediately drinkened
-                    #but it does disappear from da room
+                    #stale water cannot be put in inventory so it gets immediately drunk
+                    #but it does disappear from the room
                 elif Choice == 'Grab Water':
                     if 'Water Bottle' not in current_inventory:
                         print(item_tracker.get_item(Choice).displayinfo(1))
                         current_inventory.append('Water Bottle')
-                        #you cannot put water bottles in your in inventory, only 1 water bottle
-                        #water bottles does not disappear from da room
+                        #you cannot put multiple water bottles in your inventory, only 1 water bottle
+                        #water bottles does not disappear from the room, you can drink the water bottle and pick up another one
                     else:
                         print(item_tracker.get_item(Choice).displayinfo(2))
                 elif Choice == 'Wallet':
                     print(item_tracker.get_item(Choice).displayinfo(1, money_left))
                     adventure_map.get_room(current_room).update_items(Choice)
                     current_inventory.append(Choice)
+                    #tell the user how much money in their wallet and take it from the room to the inventory
                 else:
                     print(item_tracker.get_item(Choice).displayinfo(1))
                     adventure_map.get_room(current_room).update_items(Choice)
                     current_inventory.append(Choice)
                     #every other item goes in your inventory
-                
+                #when user picks up receipts, the counted number of purchases goes down (matters only if credit card was picked up)
                 if item_tracker.get_item(Choice).get_item_type() == 'Pickup Receipt':
                     purchase_count -= 1
+                #since user picks up an item from a room, tell them the room description (which didn't change) and their updated inventory
                 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
                 print(adventure_map.get_room(current_room))
                 string_inventory = ""
@@ -487,13 +557,12 @@ def main():
                 string_inventory = string_inventory[:-2]
                 print(f'Items in inventory: {string_inventory}\n')
                 logger.info(f'Items in inventory: {string_inventory}\n')
-                #current_status.update_time(adventure_map.get_room(current_room).get_time())
-                #current_status.update_hydration(adventure_map.get_room(current_room).get_hydration())
+                #tell the user and log their current status, based on hydration and time remaining
                 print(current_status)
-                # print('\nWhat would you like to do?')
                 logger.info(current_status)
                 logger.info(f'{current_status.get_hydration()} is your water level.')
 
+            #when player chooses an item in their inventory
             elif Choice in current_inventory:
                 print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
                 if Choice == 'Wallet':
@@ -522,12 +591,6 @@ def main():
             print(NotFoundError(Choice))
             logger.warning(NotFoundError(Choice))
 
-#STILL TO DO:
-#FIX THE LOGS !!!!!!!!!
-#also clear out log file
-#also fix comments
-#make sure we got a readme
-
-
+#runs main
 if __name__ == "__main__":
     main()
