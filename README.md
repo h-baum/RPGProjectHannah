@@ -21,6 +21,7 @@ Mower is a permanent item in the garage, but it unlocks start mowing exit if you
 It is possible to pass out or run out of time as you are mowing the second half of the lawn, and if that happens, you lose.
 
 Test Cases:
+
 Test Case 1
 Normal Win with Credit Card in Inventory:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
