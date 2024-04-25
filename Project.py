@@ -14,7 +14,7 @@ Your next move can be selecting an item in the room, an item in your inventory, 
 Drinks go straight to your inventory when selected from the room and can be drunk (selected) at any later time in the game.
 The only exception to that is the stale water, which will be drunk immediately and serves the purpose of letting you start not being a little bit thirsty. 
 It's not necessary, but it also shows you how drinking water changes your thirst level.
-Any non-drink in your inventory will read a description when you select it.
+Any non-drink in your inventory will just read a description when you select it.
 If you go to the mower without gas can and air filter, mower will not start. 
 If you go to the car without keys, you can not go from your car to any of the shops.
 If you are walking from room to room, it takes 10 minutes and hydration goes down by 1.
@@ -56,7 +56,7 @@ class AdventureMap:
     def add_room(self, room):
         self.map[room.name] = room
 
-    #returns the room in the map
+    #returns the room in the map -> dict
     def get_room(self, room_name):
         return self.map[room_name]
 
@@ -67,11 +67,11 @@ class ItemTracker:
         self.map = {}
     
     #adds the item to the map
-    def add_item(self, itemname):
+    def add_item(self, itemname: str):
         self.map[itemname.name] = itemname
     
-    #returns the item in the map
-    def get_item(self, itemname):
+    #returns the item in the map -> dict
+    def get_item(self, itemname: str):
         return self.map[itemname]
 
 #PlayerStatus class that has the attributes time and hydration
@@ -81,21 +81,21 @@ class PlayerStatus:
         self.time = time
         self.hydration = hydration
     
-    #returns the time left
+    #returns the time left -> int
     def get_time(self):
         return self.time
     
-    #returns the hydration level
+    #returns the hydration level -> int
     def get_hydration(self):
         return self.hydration
 
-    #update the time based on the time changing from room to room, return the current time left
-    def update_time(self, incoming_time):
+    #update the time based on the time changing from room to room, return the current time left -> str
+    def update_time(self, incoming_time: str):
         self.time = self.get_time() - incoming_time
         return self.time
     
     #update the hydration based on the time changing from room to room, return the current hydratio level
-    def update_hydration(self, incoming_hydration):
+    def update_hydration(self, incoming_hydration: int):
         self.hydration = self.get_hydration() - incoming_hydration
         return self.hydration
 
@@ -130,32 +130,39 @@ class PlayerStatus:
             string_overall += Thirst_text[5]
         return string_overall
 
-# SuperItem class with the attributes name, itemtype, pickuptext, and inventorytext
-# This class 
+#SuperItem class with the attributes name, itemtype, pickuptext, and inventorytext
+#This class is the superclass for the subclasses Purchase, Pickup, Permanent, and Wallet
 class SuperItem:
     def __init__(self, name, itemtype, pickuptext, inventorytext):
+    #initializes item's name, type, text when picked up, and text when selected while in inventory
         self.name = name
         self.item_type = itemtype
         self.pickup_text = pickuptext
         self.inventory_text = inventorytext
 
+    #returns item's name -> str
     def get_name(self):
         return self.name
 
+    #returns item type -> str
     def get_item_type(self):
         return self.item_type
 
+    #returns item's text when picked up -> str
     def get_pickup_text(self):
         return self.pickup_text
-        
+
+    #returns item's text when selected while in inventory -> str
     def get_inventory_text(self):
         return self.inventory_text
-    
 
+#Purchase subclass of SuperItem 
 class Purchase(SuperItem):
+    #
     def __init__(self, name, itemtype, pickuptext, inventorytext):
         SuperItem.__init__(self, name, itemtype, pickuptext, inventorytext)
 
+    #
     def displayinfo(self, text_id):
         string_overall = ''
         string_overall += f"{self.get_name()}: "
@@ -165,10 +172,13 @@ class Purchase(SuperItem):
             string_overall += self.get_inventory_text()
         return string_overall
 
+#
 class Pickup(SuperItem):
+    #
     def __init__(self, name, itemtype, pickuptext, inventorytext):
         SuperItem.__init__(self, name, itemtype, pickuptext, inventorytext)
-
+    
+    #
     def displayinfo(self, text_id):
         string_overall = ''
         string_overall += f"{self.get_name()}: "
@@ -178,10 +188,13 @@ class Pickup(SuperItem):
             string_overall += self.get_inventory_text()
         return string_overall
 
+#
 class Permanent(SuperItem):
+    #
     def __init__(self, name, itemtype, pickuptext, inventorytext):
         SuperItem.__init__(self, name, itemtype, pickuptext, inventorytext)
 
+    #
     def displayinfo(self, text_id):
         string_overall = ''
         string_overall += f"{self.get_name()}: "
@@ -190,11 +203,13 @@ class Permanent(SuperItem):
         elif text_id == 2:
             string_overall += self.get_inventory_text()
         return string_overall
-
+#
 class Wallet(SuperItem):
+    #
     def __init__(self, name, itemtype, pickuptext, inventorytext):
         SuperItem.__init__(self, name, itemtype, pickuptext, inventorytext)
 
+    #
     def displayinfo(self, text_id, money_left):
         string_overall = ''
         string_overall += f"{self.get_name()}: "
@@ -206,7 +221,9 @@ class Wallet(SuperItem):
             string_overall += ' in it.'
         return string_overall
 
+#
 class Room:
+    #
     def __init__(self, name, description, exits, unlockable_exit, items, time, hydration):
         self.name = name
         self.description = description
@@ -216,15 +233,19 @@ class Room:
         self.time = time
         self.hydration = hydration
 
+    #
     def get_name(self):
         return self.name
     
+    #
     def get_description(self):
         return self.description
-
+    
+    #
     def get_exits(self):
         return self.exits
 
+    #
     def list_exits(self):
         string_exits = ""
         for i in self.get_exits():
@@ -232,25 +253,30 @@ class Room:
         string_exits = string_exits[:-2]
         return string_exits
 
+    #
     def get_unlockable_exit(self):
         return self.unlockable_exit
 
+    #
     def update_exits(self):
         for i in range(len(self.unlockable_exit)):
             self.get_exits().append(self.unlockable_exit[i])
         self.get_unlockable_exit().clear()
         return self.exits
 
+    #
     def get_items(self):
         return self.items
     
+    #
     def get_time(self):
-        #self.time -= 10
         return self.time
-        
+
+    #    
     def get_hydration(self):
         return self.hydration
 
+    #
     def list_items(self):
         string_items = ""
         for i in self.get_items():
@@ -258,31 +284,36 @@ class Room:
         string_items = string_items[:-2]
         return string_items
 
+    #
     def add_items(self, item_to_add):
         self.get_items().append(item_to_add)
         return self.items
 
+    #
     def update_items(self, item_to_remove):
         self.get_items().remove(item_to_remove)
         return self.items
 
+    #
     def __str__(self):
         string_overall = ""
         string_overall += f"{self.get_name()}: "
         string_overall += f"{self.get_description()}\n\n"
         string_overall += f"Exits: {self.list_exits()}\n"
         string_overall += f"Items in room: {self.list_items()}"
-        #string_overall += f"You have {self.get_time()} minutes before your parents get home\n"
-        #string_overall += f"Your current hydration level is {self.get_hydration()}\n"
         return string_overall
 
-
 def main():
+    #initialize number of turns
+    turn = 1
+    #oprn log file in writing mode
+    X = open('MowTheLawn.txt', 'w')
+
     #calls map and status classes
     adventure_map = AdventureMap()
     current_status = PlayerStatus()
     #room: name, description, [exits], [unlockable exits], [items], time, hydration
-    #adds the rooms to the map
+    #add the rooms to the map
     #House rooms
     adventure_map.add_room(Room("Bedroom", "A messy room that desparately needs organizing and cleaning. At least nothing is growing, I think?", ['Kitchen', 'Master Bedroom'], [], ["Note", "Wallet", "Stale Water"], 10, 1))
     adventure_map.add_room(Room("Kitchen", "A room with a leaky sink and an near-empty fridge, containing only several water bottles.", ['Garage', 'Master Bedroom', 'Bedroom'], [], ["Grab Water", "Keys"], 10, 1))
@@ -327,19 +358,21 @@ def main():
     item_tracker.add_item(Pickup('Water Bottle', 'Pickup Drink', '', 'You drink the water. Gotta stay hydrated.'))    
     #permanently in the room, even after being interacted with, it stays in the room for future interactions, never enters inventory
     item_tracker.add_item(Permanent('Mower', 'Permanent', 'You try to start the mower, but nothing happens. Maybe it needs something.','You fill the mower with gas and replace the air filter, and it starts! Congratulations, better start mowing.'))
-    item_tracker.add_item(Permanent('Grab Water', 'Permanent', 'You take a water bottle from the fridge.', 'You already have one, so what are you doing?'))
+    item_tracker.add_item(Permanent('Grab Water', 'Permanent', 'You take a water bottle from the fridge.', "You already have one, so what are you doing? Don't be greedy."))
     #never enters inventory, immediately gone from room upon interaction
     item_tracker.add_item(Pickup('Stale Water', 'Instant Drink', 'You drink the stale water. Better than nothing.', ''))
 
     #prints and logs opening lines
     print("Welcome to Mow the Lawn! Do your best to mow the lawn today.\n")
     logger.info("Welcome to Mow the Lawn! Do your best to mow the lawn today.\n")
+    X.write("Welcome to Mow the Lawn! Do your best to mow the lawn today.\n\n")
+    X.write(f'Turn {turn}\n')
     print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     print("You wake up in your room. Next to you there is a note on the table next to the bed, as well as a cup of room-temperature water. It's currently noon, and you're feeling a bit thirsty.")
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     #initializes inventory as a list
     current_inventory = []
-    #intializes room
+    #intializes room, you wake up in your bedroom
     current_room = 'Bedroom'
     #tells user room description
     print(adventure_map.get_room(current_room))
@@ -352,15 +385,13 @@ def main():
     #tells user and logs their items in inventory
     print(f'Items in inventory: {string_inventory}\n')
     logger.info(f'Items in inventory: {string_inventory}\n')
+    X.write(f'Items in inventory: {str(string_inventory)}\n')
     #tells user and logs their current status based on time left and hydration level
     print(current_status)
     logger.info(current_status)
     logger.info(f'Hydration level:{current_status.get_hydration()}')
-
-    #if player types room name, update current room, loop
-    #if player types room item name, print item pickup line, loop
-    #   room.update item, also room.update exits
-    #if player types inventory item name, print item interact line, loop
+    X.write(f'Time remaining: {current_status.get_time()}\n')
+    X.write(f'Hydration level:{str(current_status.get_hydration())}\n')
 
     #initially, player has not mowed the front or back yard
     mowed_front = 0
@@ -372,17 +403,20 @@ def main():
         if current_status.get_hydration() <= 0 or current_status.get_hydration() >= 44: 
             print('Game over.')
             print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-            exit()
             logger.info('Game over.')
+            X.write('Game over.\n\n')
+            exit()
         #when player's time runs out, the game is over (LOSS 3)
         elif current_status.get_time() <= 0:
             print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
             print("You ran out of time. Your parents are pulling into the driveway. Expect to be grounded for the next two weeks.")
-            print('Game over.')
+            print('Game Over.')
             print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-            exit()
             logger.info("You ran out of time. Your parents are pulling into the driveway. Expect to be grounded for the next two weeks.")
-            logger.info('Game over.')
+            X.write("You ran out of time. Your parents are pulling into the driveway. Expect to be grounded for the next two weeks.\n")
+            logger.info('Game Over.')
+            X.write('Game Over.\n\n')
+            exit()
         #when the player has mowed both the front and back yard (completed the game), end the program
         elif (mowed_back + mowed_front == 2):
             #when player has credit card and does not have receipts for all their purchases, they lose (LOSS 4)
@@ -390,9 +424,14 @@ def main():
                 print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
                 print('Congrats, you have mowed the lawn. However, you were immediately grounded when they found you took their credit card and were not able to prove what you spend it on.')
                 print('You lost, do better next time and maybe your parents will be proud of you.')
+                print('Game Over.')
                 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
                 logger.info('Congrats, you have mowed the lawn. However, you were immediately grounded when they found you took their credit card and were not able to prove what you spend it on.')
                 logger.info('You lost, do better next time and maybe your parents will be proud of you.')
+                logger.info('Game Over.')
+                X.write('Congrats, you have mowed the lawn. However, you were immediately grounded when they found you took their credit card and were not able to prove what you spend it on.\n')
+                X.write('You lost, do better next time and maybe your parents will be proud of you.\n')
+                X.write('Game Over.\n\n')
             #when player has credit card and has receipts for all their purchases at the end of game, they win (WIN 1)
             elif 'Credit Card' in current_inventory and purchase_count == 0:
                 print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
@@ -401,6 +440,8 @@ def main():
                 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
                 logger.info('Congrats, you have mowed the lawn. While your parents were not happy with you for taking their card, you were able to calm them down when you showed them the receipts for your purchases.')
                 logger.info('You win, but maybe things could have gone a little better.')
+                X.write('Congrats, you have mowed the lawn. While your parents were not happy with you for taking their card, you were able to calm them down when you showed them the receipts for your purchases.\n')
+                X.write('You win, but maybe things could have gone a little better.\n\n')
             #when player still has at least 60 minutes left at the end of the game, they win (WIN 2)(BEST ENDING)
             elif current_status.get_time() >= 60:
                 print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
@@ -411,6 +452,9 @@ def main():
                 logger.info('Congrats, you have mowed the lawn! Your parents were impressed with your speed and decided to reward you by paying for your next boba.')
                 logger.info('You immediately went to the boba shop and bought yourself a lychee-flavored boba tea. Maybe it was worth doing your best for your parents.')
                 logger.info('Good job! Keep it up.')
+                X.write('Congrats, you have mowed the lawn! Your parents were impressed with your speed and decided to reward you by paying for your next boba.\n')
+                X.write('You immediately went to the boba shop and bought yourself a lychee-flavored boba tea. Maybe it was worth doing your best for your parents.\n')
+                X.write('Good job! Keep it up.\n\n')
             #when player has reached the end of game and not met either of other endings, final win message (WIN 3)
             else:
                 print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
@@ -419,6 +463,8 @@ def main():
                 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
                 logger.info('Congrats, you have mowed the lawn! Your parents are very happy.')
                 logger.info('You Won!')
+                X.write('Congrats, you have mowed the lawn! Your parents are very happy.\n')
+                X.write('You Won!\n\n')
             exit()
 
         #ask the user to input what they want to do next, fix capitalization and remove trailing whitespace
@@ -426,14 +472,17 @@ def main():
         tempchoice = input()
         Choice = tempchoice.title().strip()
         logger.info(f'User input: {tempchoice} -> {Choice}.')
+        X.write(f'User input: {tempchoice} -> {Choice}.\n\n')
+        turn +=1 
+        X.write(f'Turn {turn}\n')
 
         try:
             #raise custom exception class when user inputs an option that is not a valid exit or valid item in room/inventory
             if (Choice not in adventure_map.get_room(current_room).get_exits()) and (Choice not in adventure_map.get_room(current_room).get_items()) and (Choice not in current_inventory):
                 raise NotFoundError(Choice)
-            #user chooses an exit
+            #when user chooses an exit, update current room, loop
             if Choice in adventure_map.get_room(current_room).get_exits():
-                #if the player drives to a shop without their wallet, the game ends
+                #if the player drives home without their wallet, the game ends (LOSS 5)
                 if current_room == 'Gas Station' or current_room == 'Hardware Store' or current_room == 'Boba Shop' or current_room == 'Coffee Shop':
                     if Choice == 'Garage' and 'Wallet' not in current_inventory:
                         print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
@@ -441,6 +490,9 @@ def main():
                         print('You did not pass go and did not collect 200 dollars, and were sent directly to jail.')
                         print('Game Over.')
                         print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+                        X.write('You got pulled over at a traffic stop on the way home and were found to be driving without a license.\n')
+                        X.write('You did not pass go and did not collect 200 dollars, and were sent directly to jail.\n')
+                        X.write('Game Over.\n\n')
                         break
                 #if the player mows the front yard, half of criteria for winning met
                 if Choice == 'Mow Front':
@@ -462,6 +514,7 @@ def main():
                 #print out and log the items in player's inventory
                 print(f'Items in inventory: {string_inventory}\n')
                 logger.info(f'Items in inventory: {string_inventory}\n')
+                X.write(f'Items in inventory: {string_inventory}\n')
                 #update player's status, based on changes in time remaining and hydration levels
                 current_status.update_time(adventure_map.get_room(current_room).get_time())
                 current_status.update_hydration(adventure_map.get_room(current_room).get_hydration())
@@ -469,8 +522,12 @@ def main():
                 print(current_status)
                 logger.info(current_status)
                 logger.info(f'Hydration level: {current_status.get_hydration()}')
+                X.write(f'Time remaining: {current_status.get_time()}\n')
+                X.write(f'Hydration level: {current_status.get_hydration()}\n')
                 
             #user chooses an item in the room
+            #print item pickup line, loop
+            # may call room.update item, also room.update exits
             elif Choice in adventure_map.get_room(current_room).get_items():
                 #signifies whether user can afford item
                 item_success = True
@@ -506,17 +563,20 @@ def main():
                 elif Choice == 'Keys':
                     adventure_map.get_room('Car').update_exits()
                     logger.info('New exits have been added to the car.')
+                    X.write('New exits have been added to the car.\n')
                 print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
                 #if the user does not have enough money for the item, tell them they don't have enough and to find more
                 if item_success == False:
                     print(item_tracker.get_item(Choice).displayinfo(1))
                     print("You cannot afford this item. Go search the house for some change?")
+                    X.write('Insufficient money\n')
                 #when the user chooses the mower, it can either unlock start mowing or just prints message saying they are missing something
                 elif Choice == 'Mower':
                     if 'Gas Can' in current_inventory and 'Air Filter' in current_inventory:
                         print(item_tracker.get_item(Choice).displayinfo(2))
                         adventure_map.get_room('Garage').update_exits()
                         logger.info('New exit has been added to the garage.')
+                        X.write('New exit has been added to the garage.\n')
                         #clicking on the mower starts it if you have the required items
                     else:
                         print(item_tracker.get_item(Choice).displayinfo(1))
@@ -557,39 +617,56 @@ def main():
                 string_inventory = string_inventory[:-2]
                 print(f'Items in inventory: {string_inventory}\n')
                 logger.info(f'Items in inventory: {string_inventory}\n')
+                X.write(f'Items in inventory: {string_inventory}\n')
                 #tell the user and log their current status, based on hydration and time remaining
                 print(current_status)
                 logger.info(current_status)
                 logger.info(f'{current_status.get_hydration()} is your water level.')
+                X.write(f'Time remaining: {current_status.get_time()}\n')
+                X.write(f'Hydration level: {str(current_status.get_hydration())}.\n')
 
             #when player chooses an item in their inventory
+            #print item interact line, loop
             elif Choice in current_inventory:
                 print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+                #if they select the wallet, it will print out a message saying how much money is left in it, updates with each purchase if you don't have the credit card
                 if Choice == 'Wallet':
                     print(item_tracker.get_item(Choice).displayinfo(2, money_left))
+                #if they drink something in their inventory, a message is printed out saying what they drank, and their hydration level updates
+                #the choice is "used up" (disappears from their inventory)
                 elif item_tracker.get_item(Choice).get_item_type() == 'Purchase Drink' or item_tracker.get_item(Choice).get_item_type() == 'Pickup Drink':
                     print(item_tracker.get_item(Choice).displayinfo(2))
                     current_inventory.remove(Choice)
                     current_status.update_hydration(-15)
                 else:
+                #if they select a nondrinkable item, it just prints out the informational message
                     print(item_tracker.get_item(Choice).displayinfo(2))
                 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+                #print out description of the room
                 print(adventure_map.get_room(current_room))
                 string_inventory = ""
                 for i in current_inventory:
                     string_inventory += f"{i}, "
                 string_inventory = string_inventory[:-2]
+                #print out and log the items in current inventory
                 print(f'Items in inventory: {string_inventory}\n')
                 logger.info(f'Items in inventory: {string_inventory}\n')
-                #current_status.update_time(adventure_map.get_room(current_room).get_time())
-                #current_status.update_hydration(adventure_map.get_room(current_room).get_hydration())
+                X.write(f'Items in inventory: {string_inventory}\n')
+                #print out and log player's updated status, based on time remaining and hydration level
                 print(current_status)
                 logger.info(current_status)
                 logger.info(f'{current_status.get_hydration()} is your water level.')
-                
+                X.write(f'Time remaining: {current_status.get_time()}\n')
+                X.write(f'Hydration level: {str(current_status.get_hydration())}\n')
+
+        #when user inputs something that is not a valid exit, item in room, or item in inventory
+        #print out and log error message, they will be asked to input a valid choice
         except NotFoundError:
             print(NotFoundError(Choice))
             logger.warning(NotFoundError(Choice))
+            X.write(f'Warning: {str(NotFoundError(Choice))}\n')
+    #close the log file
+    X.close()
 
 #runs main
 if __name__ == "__main__":

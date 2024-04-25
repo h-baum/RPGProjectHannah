@@ -1,0 +1,1422 @@
+INFO:__main__:Start of Log for new game
+INFO:__main__:This is the log file for mow the lawn. It should track every user input and every print()
+INFO:__main__:Welcome to Mow the Lawn! Do your best to mow the lawn today.
+
+INFO:__main__:Items in inventory: 
+
+INFO:__main__:You have 240 minutes left.
+You are a bit thirsty.
+INFO:__main__:Hydration level:9
+INFO:__main__:User input: drink -> Drink.
+WARNING:__main__:Drink -> Room or Item not found. Please try again.
+INFO:__main__:User input: note -> Note.
+INFO:__main__:Items in inventory: Note
+
+INFO:__main__:You have 240 minutes left.
+You are a bit thirsty.
+INFO:__main__:9 is your water level.
+INFO:__main__:User input: note -> Note.
+INFO:__main__:Items in inventory: Note
+
+INFO:__main__:You have 240 minutes left.
+You are a bit thirsty.
+INFO:__main__:9 is your water level.
+INFO:__main__:User input: wallet -> Wallet.
+INFO:__main__:Items in inventory: Note, Wallet
+
+INFO:__main__:You have 240 minutes left.
+You are a bit thirsty.
+INFO:__main__:9 is your water level.
+INFO:__main__:User input: wallet -> Wallet.
+INFO:__main__:Items in inventory: Note, Wallet
+
+INFO:__main__:You have 240 minutes left.
+You are a bit thirsty.
+INFO:__main__:9 is your water level.
+INFO:__main__:User input: master bedroom -> Master Bedroom.
+INFO:__main__:Items in inventory: Note, Wallet
+
+INFO:__main__:You have 230 minutes left.
+You are a bit thirsty.
+INFO:__main__:Hydration level: 8
+INFO:__main__:User input: credit card -> Credit Card.
+INFO:__main__:Items in inventory: Note, Wallet, Credit Card
+
+INFO:__main__:You have 230 minutes left.
+You are a bit thirsty.
+INFO:__main__:8 is your water level.
+INFO:__main__:User input: kitchen -> Kitchen.
+INFO:__main__:Items in inventory: Note, Wallet, Credit Card
+
+INFO:__main__:You have 220 minutes left.
+You are a bit thirsty.
+INFO:__main__:Hydration level: 7
+INFO:__main__:User input: keys -> Keys.
+INFO:__main__:New exits have been added to the car.
+INFO:__main__:Items in inventory: Note, Wallet, Credit Card, Keys
+
+INFO:__main__:You have 220 minutes left.
+You are a bit thirsty.
+INFO:__main__:7 is your water level.
+INFO:__main__:User input: grab water -> Grab Water.
+INFO:__main__:Items in inventory: Note, Wallet, Credit Card, Keys, Water Bottle
+
+INFO:__main__:You have 220 minutes left.
+You are a bit thirsty.
+INFO:__main__:7 is your water level.
+INFO:__main__:User input: anwo -> Anwo.
+WARNING:__main__:Anwo -> Room or Item not found. Please try again.
+INFO:__main__:User input: afwofag -> Afwofag.
+WARNING:__main__:Afwofag -> Room or Item not found. Please try again.
+INFO:__main__:User input: gergn -> Gergn.
+WARNING:__main__:Gergn -> Room or Item not found. Please try again.
+INFO:__main__:User input: grab water -> Grab Water.
+INFO:__main__:Items in inventory: Note, Wallet, Credit Card, Keys, Water Bottle
+
+INFO:__main__:You have 220 minutes left.
+You are a bit thirsty.
+INFO:__main__:7 is your water level.
+INFO:__main__:User input: wallet -> Wallet.
+INFO:__main__:Items in inventory: Note, Wallet, Credit Card, Keys, Water Bottle
+
+INFO:__main__:You have 220 minutes left.
+You are a bit thirsty.
+INFO:__main__:7 is your water level.
+INFO:__main__:User input: credit card -> Credit Card.
+INFO:__main__:Items in inventory: Note, Wallet, Credit Card, Keys, Water Bottle
+
+INFO:__main__:You have 220 minutes left.
+You are a bit thirsty.
+INFO:__main__:7 is your water level.
+INFO:__main__:User input: keys -> Keys.
+INFO:__main__:Items in inventory: Note, Wallet, Credit Card, Keys, Water Bottle
+
+INFO:__main__:You have 220 minutes left.
+You are a bit thirsty.
+INFO:__main__:7 is your water level.
+INFO:__main__:User input: garage -> Garage.
+INFO:__main__:Items in inventory: Note, Wallet, Credit Card, Keys, Water Bottle
+
+INFO:__main__:You have 210 minutes left.
+You are thirsty.
+INFO:__main__:Hydration level: 6
+INFO:__main__:User input: water bottle -> Water Bottle.
+INFO:__main__:Items in inventory: Note, Wallet, Credit Card, Keys
+
+INFO:__main__:You have 210 minutes left.
+You are not thirsty.
+INFO:__main__:21 is your water level.
+INFO:__main__:User input: kitchen -> Kitchen.
+INFO:__main__:Items in inventory: Note, Wallet, Credit Card, Keys
+
+INFO:__main__:You have 200 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 20
+INFO:__main__:User input: grab water -> Grab Water.
+INFO:__main__:Items in inventory: Note, Wallet, Credit Card, Keys, Water Bottle
+
+INFO:__main__:You have 200 minutes left.
+You are not thirsty.
+INFO:__main__:20 is your water level.
+INFO:__main__:User input: garage -> Garage.
+INFO:__main__:Items in inventory: Note, Wallet, Credit Card, Keys, Water Bottle
+
+INFO:__main__:You have 190 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 19
+INFO:__main__:User input: mower -> Mower.
+INFO:__main__:Items in inventory: Note, Wallet, Credit Card, Keys, Water Bottle
+
+INFO:__main__:You have 190 minutes left.
+You are not thirsty.
+INFO:__main__:19 is your water level.
+INFO:__main__:User input: car -> Car.
+INFO:__main__:Items in inventory: Note, Wallet, Credit Card, Keys, Water Bottle
+
+INFO:__main__:You have 180 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 18
+INFO:__main__:User input: boba shop -> Boba Shop.
+INFO:__main__:Items in inventory: Note, Wallet, Credit Card, Keys, Water Bottle
+
+INFO:__main__:You have 160 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 16
+INFO:__main__:User input: boba tea -> Boba Tea.
+INFO:__main__:Items in inventory: Note, Wallet, Credit Card, Keys, Water Bottle, Boba Tea
+
+INFO:__main__:You have 160 minutes left.
+You are not thirsty.
+INFO:__main__:16 is your water level.
+INFO:__main__:User input: boba receipt -> Boba Receipt.
+INFO:__main__:Items in inventory: Note, Wallet, Credit Card, Keys, Water Bottle, Boba Tea, Boba Receipt
+
+INFO:__main__:You have 160 minutes left.
+You are not thirsty.
+INFO:__main__:16 is your water level.
+INFO:__main__:User input: gas station -> Gas Station.
+INFO:__main__:Items in inventory: Note, Wallet, Credit Card, Keys, Water Bottle, Boba Tea, Boba Receipt
+
+INFO:__main__:You have 140 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 14
+INFO:__main__:User input: gas can -> Gas Can.
+INFO:__main__:Items in inventory: Note, Wallet, Credit Card, Keys, Water Bottle, Boba Tea, Boba Receipt, Gas Can
+
+INFO:__main__:You have 140 minutes left.
+You are not thirsty.
+INFO:__main__:14 is your water level.
+INFO:__main__:User input: gas receipt -> Gas Receipt.
+INFO:__main__:Items in inventory: Note, Wallet, Credit Card, Keys, Water Bottle, Boba Tea, Boba Receipt, Gas Can, Gas Receipt
+
+INFO:__main__:You have 140 minutes left.
+You are not thirsty.
+INFO:__main__:14 is your water level.
+INFO:__main__:User input: hardware store -> Hardware Store.
+INFO:__main__:Items in inventory: Note, Wallet, Credit Card, Keys, Water Bottle, Boba Tea, Boba Receipt, Gas Can, Gas Receipt
+
+INFO:__main__:You have 120 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 12
+INFO:__main__:User input: air filter -> Air Filter.
+INFO:__main__:Items in inventory: Note, Wallet, Credit Card, Keys, Water Bottle, Boba Tea, Boba Receipt, Gas Can, Gas Receipt, Air Filter
+
+INFO:__main__:You have 120 minutes left.
+You are not thirsty.
+INFO:__main__:12 is your water level.
+INFO:__main__:User input: filter receipt -> Filter Receipt.
+INFO:__main__:Items in inventory: Note, Wallet, Credit Card, Keys, Water Bottle, Boba Tea, Boba Receipt, Gas Can, Gas Receipt, Air Filter, Filter Receipt
+
+INFO:__main__:You have 120 minutes left.
+You are not thirsty.
+INFO:__main__:12 is your water level.
+INFO:__main__:User input: filter receipt -> Filter Receipt.
+INFO:__main__:Items in inventory: Note, Wallet, Credit Card, Keys, Water Bottle, Boba Tea, Boba Receipt, Gas Can, Gas Receipt, Air Filter, Filter Receipt
+
+INFO:__main__:You have 120 minutes left.
+You are not thirsty.
+INFO:__main__:12 is your water level.
+INFO:__main__:User input: boba receipt -> Boba Receipt.
+INFO:__main__:Items in inventory: Note, Wallet, Credit Card, Keys, Water Bottle, Boba Tea, Boba Receipt, Gas Can, Gas Receipt, Air Filter, Filter Receipt
+
+INFO:__main__:You have 120 minutes left.
+You are not thirsty.
+INFO:__main__:12 is your water level.
+INFO:__main__:User input: gas receipt -> Gas Receipt.
+INFO:__main__:Items in inventory: Note, Wallet, Credit Card, Keys, Water Bottle, Boba Tea, Boba Receipt, Gas Can, Gas Receipt, Air Filter, Filter Receipt
+
+INFO:__main__:You have 120 minutes left.
+You are not thirsty.
+INFO:__main__:12 is your water level.
+INFO:__main__:User input: garage -> Garage.
+INFO:__main__:Items in inventory: Note, Wallet, Credit Card, Keys, Water Bottle, Boba Tea, Boba Receipt, Gas Can, Gas Receipt, Air Filter, Filter Receipt
+
+INFO:__main__:You have 110 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 11
+INFO:__main__:User input: mower -> Mower.
+INFO:__main__:New exit has been added to the garage.
+INFO:__main__:Items in inventory: Note, Wallet, Credit Card, Keys, Water Bottle, Boba Tea, Boba Receipt, Gas Can, Gas Receipt, Air Filter, Filter Receipt
+
+INFO:__main__:You have 110 minutes left.
+You are not thirsty.
+INFO:__main__:11 is your water level.
+INFO:__main__:User input: mower -> Mower.
+INFO:__main__:New exit has been added to the garage.
+INFO:__main__:Items in inventory: Note, Wallet, Credit Card, Keys, Water Bottle, Boba Tea, Boba Receipt, Gas Can, Gas Receipt, Air Filter, Filter Receipt
+
+INFO:__main__:You have 110 minutes left.
+You are not thirsty.
+INFO:__main__:11 is your water level.
+INFO:__main__:User input: start mowing -> Start Mowing.
+INFO:__main__:Items in inventory: Note, Wallet, Credit Card, Keys, Water Bottle, Boba Tea, Boba Receipt, Gas Can, Gas Receipt, Air Filter, Filter Receipt
+
+INFO:__main__:You have 100 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 10
+INFO:__main__:User input: mow front -> Mow Front.
+INFO:__main__:Items in inventory: Note, Wallet, Credit Card, Keys, Water Bottle, Boba Tea, Boba Receipt, Gas Can, Gas Receipt, Air Filter, Filter Receipt
+
+INFO:__main__:You have 70 minutes left.
+You are thirsty.
+INFO:__main__:Hydration level: 5
+INFO:__main__:User input: boba tea -> Boba Tea.
+INFO:__main__:Items in inventory: Note, Wallet, Credit Card, Keys, Water Bottle, Boba Receipt, Gas Can, Gas Receipt, Air Filter, Filter Receipt
+
+INFO:__main__:You have 70 minutes left.
+You are not thirsty.
+INFO:__main__:20 is your water level.
+INFO:__main__:User input: mow back -> Mow Back.
+INFO:__main__:Items in inventory: Note, Wallet, Credit Card, Keys, Water Bottle, Boba Receipt, Gas Can, Gas Receipt, Air Filter, Filter Receipt
+
+INFO:__main__:You have 40 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 15
+INFO:__main__:Congrats, you have mowed the lawn. While your parents were not happy with you for taking their card, you were able to calm them down when you showed them the receipts for your purchases.
+INFO:__main__:You win, but maybe things could have gone a little better.
+INFO:__main__:Start of Log for new game
+INFO:__main__:This is the log file for mow the lawn. It should track every user input and every print()
+INFO:__main__:Welcome to Mow the Lawn! Do your best to mow the lawn today.
+
+INFO:__main__:Items in inventory: 
+
+INFO:__main__:You have 240 minutes left.
+You are a bit thirsty.
+INFO:__main__:Hydration level:9
+INFO:__main__:User input: kitchen -> Kitchen.
+INFO:__main__:Items in inventory: 
+
+INFO:__main__:You have 230 minutes left.
+You are a bit thirsty.
+INFO:__main__:Hydration level: 8
+INFO:__main__:User input: keys -> Keys.
+INFO:__main__:New exits have been added to the car.
+INFO:__main__:Items in inventory: Keys
+
+INFO:__main__:You have 230 minutes left.
+You are a bit thirsty.
+INFO:__main__:8 is your water level.
+INFO:__main__:User input: master bedroom -> Master Bedroom.
+INFO:__main__:Items in inventory: Keys
+
+INFO:__main__:You have 220 minutes left.
+You are a bit thirsty.
+INFO:__main__:Hydration level: 7
+INFO:__main__:User input: credit card -> Credit Card.
+INFO:__main__:Items in inventory: Keys, Credit Card
+
+INFO:__main__:You have 220 minutes left.
+You are a bit thirsty.
+INFO:__main__:7 is your water level.
+INFO:__main__:User input: kitchen -> Kitchen.
+INFO:__main__:Items in inventory: Keys, Credit Card
+
+INFO:__main__:You have 210 minutes left.
+You are thirsty.
+INFO:__main__:Hydration level: 6
+INFO:__main__:User input: grab water -> Grab Water.
+INFO:__main__:Items in inventory: Keys, Credit Card, Water Bottle
+
+INFO:__main__:You have 210 minutes left.
+You are thirsty.
+INFO:__main__:6 is your water level.
+INFO:__main__:User input: water bottle -> Water Bottle.
+INFO:__main__:Items in inventory: Keys, Credit Card
+
+INFO:__main__:You have 210 minutes left.
+You are not thirsty.
+INFO:__main__:21 is your water level.
+INFO:__main__:User input: grab water -> Grab Water.
+INFO:__main__:Items in inventory: Keys, Credit Card, Water Bottle
+
+INFO:__main__:You have 210 minutes left.
+You are not thirsty.
+INFO:__main__:21 is your water level.
+INFO:__main__:User input: garage -> Garage.
+INFO:__main__:Items in inventory: Keys, Credit Card, Water Bottle
+
+INFO:__main__:You have 200 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 20
+INFO:__main__:User input: car -> Car.
+INFO:__main__:Items in inventory: Keys, Credit Card, Water Bottle
+
+INFO:__main__:You have 190 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 19
+INFO:__main__:User input: gas station -> Gas Station.
+INFO:__main__:Items in inventory: Keys, Credit Card, Water Bottle
+
+INFO:__main__:You have 170 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 17
+INFO:__main__:User input: gas can -> Gas Can.
+INFO:__main__:Items in inventory: Keys, Credit Card, Water Bottle, Gas Can
+
+INFO:__main__:You have 170 minutes left.
+You are not thirsty.
+INFO:__main__:17 is your water level.
+INFO:__main__:User input: hardware store -> Hardware Store.
+INFO:__main__:Items in inventory: Keys, Credit Card, Water Bottle, Gas Can
+
+INFO:__main__:You have 150 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 15
+INFO:__main__:User input:  -> .
+WARNING:__main__: -> Room or Item not found. Please try again.
+INFO:__main__:User input: air filter -> Air Filter.
+INFO:__main__:Items in inventory: Keys, Credit Card, Water Bottle, Gas Can, Air Filter
+
+INFO:__main__:You have 150 minutes left.
+You are not thirsty.
+INFO:__main__:15 is your water level.
+INFO:__main__:User input: credit card -> Credit Card.
+INFO:__main__:Items in inventory: Keys, Credit Card, Water Bottle, Gas Can, Air Filter
+
+INFO:__main__:You have 150 minutes left.
+You are not thirsty.
+INFO:__main__:15 is your water level.
+INFO:__main__:User input: boba shop -> Boba Shop.
+INFO:__main__:Items in inventory: Keys, Credit Card, Water Bottle, Gas Can, Air Filter
+
+INFO:__main__:You have 130 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 13
+INFO:__main__:User input: boba tea -> Boba Tea.
+INFO:__main__:Items in inventory: Keys, Credit Card, Water Bottle, Gas Can, Air Filter, Boba Tea
+
+INFO:__main__:You have 130 minutes left.
+You are not thirsty.
+INFO:__main__:13 is your water level.
+INFO:__main__:User input: hardware store -> Hardware Store.
+INFO:__main__:Items in inventory: Keys, Credit Card, Water Bottle, Gas Can, Air Filter, Boba Tea
+
+INFO:__main__:You have 110 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 11
+INFO:__main__:User input: coffee shop -> Coffee Shop.
+INFO:__main__:Items in inventory: Keys, Credit Card, Water Bottle, Gas Can, Air Filter, Boba Tea
+
+INFO:__main__:You have 90 minutes left.
+You are a bit thirsty.
+INFO:__main__:Hydration level: 9
+INFO:__main__:User input: coffee -> Coffee.
+INFO:__main__:Items in inventory: Keys, Credit Card, Water Bottle, Gas Can, Air Filter, Boba Tea, Coffee
+
+INFO:__main__:You have 90 minutes left.
+You are a bit thirsty.
+INFO:__main__:9 is your water level.
+INFO:__main__:User input: garage -> Garage.
+INFO:__main__:Start of Log for new game
+INFO:__main__:This is the log file for mow the lawn. It should track every user input and every print()
+INFO:__main__:Welcome to Mow the Lawn! Do your best to mow the lawn today.
+
+INFO:__main__:Items in inventory: 
+
+INFO:__main__:You have 240 minutes left.
+You are a bit thirsty.
+INFO:__main__:Hydration level:9
+INFO:__main__:User input: fwd -> Fwd.
+WARNING:__main__:Fwd -> Room or Item not found. Please try again.
+INFO:__main__:Start of Log for new game
+INFO:__main__:This is the log file for mow the lawn. It should track every user input and every print()
+INFO:__main__:Welcome to Mow the Lawn! Do your best to mow the lawn today.
+
+INFO:__main__:Items in inventory: 
+
+INFO:__main__:You have 240 minutes left.
+You are a bit thirsty.
+INFO:__main__:Hydration level:9
+INFO:__main__:User input: clc -> Clc.
+WARNING:__main__:Clc -> Room or Item not found. Please try again.
+INFO:__main__:User input: clear -> Clear.
+WARNING:__main__:Clear -> Room or Item not found. Please try again.
+INFO:__main__:Start of Log for new game
+INFO:__main__:This is the log file for mow the lawn. It should track every user input and every print()
+INFO:__main__:Welcome to Mow the Lawn! Do your best to mow the lawn today.
+
+INFO:__main__:Items in inventory: 
+
+INFO:__main__:You have 240 minutes left.
+You are a bit thirsty.
+INFO:__main__:Hydration level:9
+INFO:__main__:Start of Log for new game
+INFO:__main__:This is the log file for mow the lawn. It should track every user input and every print()
+INFO:__main__:Welcome to Mow the Lawn! Do your best to mow the lawn today.
+
+INFO:__main__:Items in inventory: 
+
+INFO:__main__:You have 240 minutes left.
+You are a bit thirsty.
+INFO:__main__:Hydration level:9
+INFO:__main__:User input: kitchen -> Kitchen.
+INFO:__main__:Items in inventory: 
+
+INFO:__main__:You have 230 minutes left.
+You are a bit thirsty.
+INFO:__main__:Hydration level: 8
+INFO:__main__:User input: keys -> Keys.
+INFO:__main__:New exits have been added to the car.
+INFO:__main__:Items in inventory: Keys
+
+INFO:__main__:You have 230 minutes left.
+You are a bit thirsty.
+INFO:__main__:8 is your water level.
+INFO:__main__:User input: grab water -> Grab Water.
+INFO:__main__:Items in inventory: Keys, Water Bottle
+
+INFO:__main__:You have 230 minutes left.
+You are a bit thirsty.
+INFO:__main__:8 is your water level.
+INFO:__main__:User input: water bottle -> Water Bottle.
+INFO:__main__:Items in inventory: Keys
+
+INFO:__main__:You have 230 minutes left.
+You are not thirsty.
+INFO:__main__:23 is your water level.
+INFO:__main__:User input: grab water -> Grab Water.
+INFO:__main__:Items in inventory: Keys, Water Bottle
+
+INFO:__main__:You have 230 minutes left.
+You are not thirsty.
+INFO:__main__:23 is your water level.
+INFO:__main__:User input: water bottle -> Water Bottle.
+INFO:__main__:Items in inventory: Keys
+
+INFO:__main__:You have 230 minutes left.
+You are not thirsty.
+INFO:__main__:38 is your water level.
+INFO:__main__:User input: grab water -> Grab Water.
+INFO:__main__:Items in inventory: Keys, Water Bottle
+
+INFO:__main__:You have 230 minutes left.
+You are not thirsty.
+INFO:__main__:38 is your water level.
+INFO:__main__:User input: water bottlw -> Water Bottlw.
+WARNING:__main__:Water Bottlw -> Room or Item not found. Please try again.
+INFO:__main__:User input: water bottle -> Water Bottle.
+INFO:__main__:Items in inventory: Keys
+
+INFO:__main__:You have 0 minutes left.
+You get water poisoning and pass out.
+INFO:__main__:53 is your water level.
+INFO:__main__:Start of Log for new game
+INFO:__main__:This is the log file for mow the lawn. It should track every user input and every print()
+INFO:__main__:Welcome to Mow the Lawn! Do your best to mow the lawn today.
+
+INFO:__main__:Items in inventory: 
+
+INFO:__main__:You have 240 minutes left.
+You are a bit thirsty.
+INFO:__main__:Hydration level:9
+INFO:__main__:User input: kitchen -> Kitchen.
+INFO:__main__:Items in inventory: 
+
+INFO:__main__:You have 230 minutes left.
+You are a bit thirsty.
+INFO:__main__:Hydration level: 8
+INFO:__main__:User input: keys -> Keys.
+INFO:__main__:New exits have been added to the car.
+INFO:__main__:Items in inventory: Keys
+
+INFO:__main__:You have 230 minutes left.
+You are a bit thirsty.
+INFO:__main__:8 is your water level.
+INFO:__main__:User input: garage -> Garage.
+INFO:__main__:Items in inventory: Keys
+
+INFO:__main__:You have 220 minutes left.
+You are a bit thirsty.
+INFO:__main__:Hydration level: 7
+INFO:__main__:User input: car -> Car.
+INFO:__main__:Items in inventory: Keys
+
+INFO:__main__:You have 210 minutes left.
+You are thirsty.
+INFO:__main__:Hydration level: 6
+INFO:__main__:User input: boba shop -> Boba Shop.
+INFO:__main__:Items in inventory: Keys
+
+INFO:__main__:You have 190 minutes left.
+You are thirsty.
+INFO:__main__:Hydration level: 4
+INFO:__main__:User input: garage -> Garage.
+INFO:__main__:Start of Log for new game
+INFO:__main__:This is the log file for mow the lawn. It should track every user input and every print()
+INFO:__main__:Welcome to Mow the Lawn! Do your best to mow the lawn today.
+
+INFO:__main__:Items in inventory: 
+
+INFO:__main__:You have 240 minutes left.
+You are a bit thirsty.
+INFO:__main__:Hydration level:9
+INFO:__main__:User input: note -> Note.
+INFO:__main__:Items in inventory: Note
+
+INFO:__main__:You have 240 minutes left.
+You are a bit thirsty.
+INFO:__main__:9 is your water level.
+INFO:__main__:User input: wallet -> Wallet.
+INFO:__main__:Items in inventory: Note, Wallet
+
+INFO:__main__:You have 240 minutes left.
+You are a bit thirsty.
+INFO:__main__:9 is your water level.
+INFO:__main__:User input: asd -> Asd.
+WARNING:__main__:Asd -> Room or Item not found. Please try again.
+INFO:__main__:User input: wallet -> Wallet.
+INFO:__main__:Items in inventory: Note, Wallet
+
+INFO:__main__:You have 240 minutes left.
+You are a bit thirsty.
+INFO:__main__:9 is your water level.
+INFO:__main__:User input: stale water -> Stale Water.
+INFO:__main__:Items in inventory: Note, Wallet
+
+INFO:__main__:You have 240 minutes left.
+You are not thirsty.
+INFO:__main__:14 is your water level.
+INFO:__main__:User input: kitchen -> Kitchen.
+INFO:__main__:Items in inventory: Note, Wallet
+
+INFO:__main__:You have 230 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 13
+INFO:__main__:User input: grab water -> Grab Water.
+INFO:__main__:Items in inventory: Note, Wallet, Water Bottle
+
+INFO:__main__:You have 230 minutes left.
+You are not thirsty.
+INFO:__main__:13 is your water level.
+INFO:__main__:User input: keys -> Keys.
+INFO:__main__:New exits have been added to the car.
+INFO:__main__:Items in inventory: Note, Wallet, Water Bottle, Keys
+
+INFO:__main__:You have 230 minutes left.
+You are not thirsty.
+INFO:__main__:13 is your water level.
+INFO:__main__:User input: garage -> Garage.
+INFO:__main__:Items in inventory: Note, Wallet, Water Bottle, Keys
+
+INFO:__main__:You have 220 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 12
+INFO:__main__:User input: car -> Car.
+INFO:__main__:Items in inventory: Note, Wallet, Water Bottle, Keys
+
+INFO:__main__:You have 210 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 11
+INFO:__main__:User input: gas station -> Gas Station.
+INFO:__main__:Items in inventory: Note, Wallet, Water Bottle, Keys
+
+INFO:__main__:You have 190 minutes left.
+You are a bit thirsty.
+INFO:__main__:Hydration level: 9
+INFO:__main__:User input: gas can -> Gas Can.
+INFO:__main__:Items in inventory: Note, Wallet, Water Bottle, Keys, Gas Can
+
+INFO:__main__:You have 190 minutes left.
+You are a bit thirsty.
+INFO:__main__:9 is your water level.
+INFO:__main__:User input: hardware store -> Hardware Store.
+INFO:__main__:Items in inventory: Note, Wallet, Water Bottle, Keys, Gas Can
+
+INFO:__main__:You have 170 minutes left.
+You are a bit thirsty.
+INFO:__main__:Hydration level: 7
+INFO:__main__:User input: air filter -> Air Filter.
+INFO:__main__:Items in inventory: Note, Wallet, Water Bottle, Keys, Gas Can, Air Filter
+
+INFO:__main__:You have 170 minutes left.
+You are a bit thirsty.
+INFO:__main__:7 is your water level.
+INFO:__main__:User input: garage -> Garage.
+INFO:__main__:Items in inventory: Note, Wallet, Water Bottle, Keys, Gas Can, Air Filter
+
+INFO:__main__:You have 160 minutes left.
+You are thirsty.
+INFO:__main__:Hydration level: 6
+INFO:__main__:User input: water bottle -> Water Bottle.
+INFO:__main__:Items in inventory: Note, Wallet, Keys, Gas Can, Air Filter
+
+INFO:__main__:You have 160 minutes left.
+You are not thirsty.
+INFO:__main__:21 is your water level.
+INFO:__main__:User input: mower -> Mower.
+INFO:__main__:New exit has been added to the garage.
+INFO:__main__:Items in inventory: Note, Wallet, Keys, Gas Can, Air Filter
+
+INFO:__main__:You have 160 minutes left.
+You are not thirsty.
+INFO:__main__:21 is your water level.
+INFO:__main__:User input: start mowing -> Start Mowing.
+INFO:__main__:Items in inventory: Note, Wallet, Keys, Gas Can, Air Filter
+
+INFO:__main__:You have 150 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 20
+INFO:__main__:User input: mow front -> Mow Front.
+INFO:__main__:Items in inventory: Note, Wallet, Keys, Gas Can, Air Filter
+
+INFO:__main__:You have 120 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 15
+INFO:__main__:User input: mow back -> Mow Back.
+INFO:__main__:Items in inventory: Note, Wallet, Keys, Gas Can, Air Filter
+
+INFO:__main__:You have 90 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 10
+INFO:__main__:Congrats, you have mowed the lawn! Your parents were impressed with your speed and decided to reward you by paying for your next boba.
+INFO:__main__:You immediately went to the boba shop and bought yourself a lychee-flavored boba tea. Maybe it was worth doing your best for your parents.
+INFO:__main__:Good job! Keep it up.
+INFO:__main__:Start of Log for new game
+INFO:__main__:This is the log file for mow the lawn. It should track every user input and every print()
+INFO:__main__:Welcome to Mow the Lawn! Do your best to mow the lawn today.
+
+INFO:__main__:Items in inventory: 
+
+INFO:__main__:You have 240 minutes left.
+You are a bit thirsty.
+INFO:__main__:Hydration level:9
+INFO:__main__:User input: note -> Note.
+INFO:__main__:Items in inventory: Note
+
+INFO:__main__:You have 240 minutes left.
+You are a bit thirsty.
+INFO:__main__:9 is your water level.
+INFO:__main__:User input: wallet -> Wallet.
+INFO:__main__:Items in inventory: Note, Wallet
+
+INFO:__main__:You have 240 minutes left.
+You are a bit thirsty.
+INFO:__main__:9 is your water level.
+INFO:__main__:User input: stale water -> Stale Water.
+INFO:__main__:Items in inventory: Note, Wallet
+
+INFO:__main__:You have 240 minutes left.
+You are not thirsty.
+INFO:__main__:14 is your water level.
+INFO:__main__:User input: kitchen -> Kitchen.
+INFO:__main__:Items in inventory: Note, Wallet
+
+INFO:__main__:You have 230 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 13
+INFO:__main__:User input: keys -> Keys.
+INFO:__main__:New exits have been added to the car.
+INFO:__main__:Items in inventory: Note, Wallet, Keys
+
+INFO:__main__:You have 230 minutes left.
+You are not thirsty.
+INFO:__main__:13 is your water level.
+INFO:__main__:User input: garage -> Garage.
+INFO:__main__:Items in inventory: Note, Wallet, Keys
+
+INFO:__main__:You have 220 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 12
+INFO:__main__:User input: car -> Car.
+INFO:__main__:Items in inventory: Note, Wallet, Keys
+
+INFO:__main__:You have 210 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 11
+INFO:__main__:User input: boba shop -> Boba Shop.
+INFO:__main__:Items in inventory: Note, Wallet, Keys
+
+INFO:__main__:You have 190 minutes left.
+You are a bit thirsty.
+INFO:__main__:Hydration level: 9
+INFO:__main__:User input: coffee shop -> Coffee Shop.
+INFO:__main__:Items in inventory: Note, Wallet, Keys
+
+INFO:__main__:You have 170 minutes left.
+You are a bit thirsty.
+INFO:__main__:Hydration level: 7
+INFO:__main__:User input: gas station -> Gas Station.
+INFO:__main__:Items in inventory: Note, Wallet, Keys
+
+INFO:__main__:You have 150 minutes left.
+You are thirsty.
+INFO:__main__:Hydration level: 5
+INFO:__main__:User input: hardware store -> Hardware Store.
+INFO:__main__:Items in inventory: Note, Wallet, Keys
+
+INFO:__main__:You have 130 minutes left.
+You are very thirsty.
+INFO:__main__:Hydration level: 3
+INFO:__main__:User input: gas station -> Gas Station.
+INFO:__main__:Items in inventory: Note, Wallet, Keys
+
+INFO:__main__:You have 110 minutes left.
+You are very thirsty.
+INFO:__main__:Hydration level: 1
+INFO:__main__:User input: coffee shop -> Coffee Shop.
+INFO:__main__:Items in inventory: Note, Wallet, Keys
+
+INFO:__main__:You have 0 minutes left.
+You pass out from dehydration.
+INFO:__main__:Hydration level: -1
+INFO:__main__:Start of Log for new game
+INFO:__main__:This is the log file for mow the lawn. It should track every user input and every print()
+INFO:__main__:Welcome to Mow the Lawn! Do your best to mow the lawn today.
+
+INFO:__main__:Items in inventory: 
+
+INFO:__main__:You have 240 minutes left.
+You are a bit thirsty.
+INFO:__main__:Hydration level:9
+INFO:__main__:User input: wallet -> Wallet.
+INFO:__main__:Items in inventory: Wallet
+
+INFO:__main__:You have 240 minutes left.
+You are a bit thirsty.
+INFO:__main__:9 is your water level.
+INFO:__main__:User input: kitchen -> Kitchen.
+INFO:__main__:Items in inventory: Wallet
+
+INFO:__main__:You have 230 minutes left.
+You are a bit thirsty.
+INFO:__main__:Hydration level: 8
+INFO:__main__:User input: keys -> Keys.
+INFO:__main__:New exits have been added to the car.
+INFO:__main__:Items in inventory: Wallet, Keys
+
+INFO:__main__:You have 230 minutes left.
+You are a bit thirsty.
+INFO:__main__:8 is your water level.
+INFO:__main__:User input: grab water -> Grab Water.
+INFO:__main__:Items in inventory: Wallet, Keys, Water Bottle
+
+INFO:__main__:You have 230 minutes left.
+You are a bit thirsty.
+INFO:__main__:8 is your water level.
+INFO:__main__:User input: garage -> Garage.
+INFO:__main__:Items in inventory: Wallet, Keys, Water Bottle
+
+INFO:__main__:You have 220 minutes left.
+You are a bit thirsty.
+INFO:__main__:Hydration level: 7
+INFO:__main__:User input: car -> Car.
+INFO:__main__:Items in inventory: Wallet, Keys, Water Bottle
+
+INFO:__main__:You have 210 minutes left.
+You are thirsty.
+INFO:__main__:Hydration level: 6
+INFO:__main__:User input: water bottle -> Water Bottle.
+INFO:__main__:Items in inventory: Wallet, Keys
+
+INFO:__main__:You have 210 minutes left.
+You are not thirsty.
+INFO:__main__:21 is your water level.
+INFO:__main__:User input: gas station -> Gas Station.
+INFO:__main__:Items in inventory: Wallet, Keys
+
+INFO:__main__:You have 190 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 19
+INFO:__main__:User input: gas can -> Gas Can.
+INFO:__main__:Items in inventory: Wallet, Keys, Gas Can
+
+INFO:__main__:You have 190 minutes left.
+You are not thirsty.
+INFO:__main__:19 is your water level.
+INFO:__main__:User input: hardware store -> Hardware Store.
+INFO:__main__:Items in inventory: Wallet, Keys, Gas Can
+
+INFO:__main__:You have 170 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 17
+INFO:__main__:User input: air filter -> Air Filter.
+INFO:__main__:Items in inventory: Wallet, Keys, Gas Can, Air Filter
+
+INFO:__main__:You have 170 minutes left.
+You are not thirsty.
+INFO:__main__:17 is your water level.
+INFO:__main__:User input: boba shop -> Boba Shop.
+INFO:__main__:Items in inventory: Wallet, Keys, Gas Can, Air Filter
+
+INFO:__main__:You have 150 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 15
+INFO:__main__:User input: boba tea -> Boba Tea.
+INFO:__main__:Items in inventory: Wallet, Keys, Gas Can, Air Filter
+
+INFO:__main__:You have 150 minutes left.
+You are not thirsty.
+INFO:__main__:15 is your water level.
+INFO:__main__:User input: wallet -> Wallet.
+INFO:__main__:Items in inventory: Wallet, Keys, Gas Can, Air Filter
+
+INFO:__main__:You have 150 minutes left.
+You are not thirsty.
+INFO:__main__:15 is your water level.
+INFO:__main__:User input: boba tea -> Boba Tea.
+INFO:__main__:Items in inventory: Wallet, Keys, Gas Can, Air Filter
+
+INFO:__main__:You have 150 minutes left.
+You are not thirsty.
+INFO:__main__:15 is your water level.
+INFO:__main__:User input: coffee shop -> Coffee Shop.
+INFO:__main__:Items in inventory: Wallet, Keys, Gas Can, Air Filter
+
+INFO:__main__:You have 130 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 13
+INFO:__main__:User input: coffee -> Coffee.
+INFO:__main__:Items in inventory: Wallet, Keys, Gas Can, Air Filter
+
+INFO:__main__:You have 130 minutes left.
+You are not thirsty.
+INFO:__main__:13 is your water level.
+INFO:__main__:User input: garage -> Garage.
+INFO:__main__:Items in inventory: Wallet, Keys, Gas Can, Air Filter
+
+INFO:__main__:You have 120 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 12
+INFO:__main__:User input: mower -> Mower.
+INFO:__main__:New exit has been added to the garage.
+INFO:__main__:Items in inventory: Wallet, Keys, Gas Can, Air Filter
+
+INFO:__main__:You have 120 minutes left.
+You are not thirsty.
+INFO:__main__:12 is your water level.
+INFO:__main__:User input: start mowing -> Start Mowing.
+INFO:__main__:Items in inventory: Wallet, Keys, Gas Can, Air Filter
+
+INFO:__main__:You have 110 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 11
+INFO:__main__:User input: mow front -> Mow Front.
+INFO:__main__:Items in inventory: Wallet, Keys, Gas Can, Air Filter
+
+INFO:__main__:You have 80 minutes left.
+You are thirsty.
+INFO:__main__:Hydration level: 6
+INFO:__main__:User input: mow back -> Mow Back.
+INFO:__main__:Items in inventory: Wallet, Keys, Gas Can, Air Filter
+
+INFO:__main__:You have 50 minutes left.
+You are very thirsty.
+INFO:__main__:Hydration level: 1
+INFO:__main__:Congrats, you have mowed the lawn! Your parents are very happy.
+INFO:__main__:You Won!
+INFO:__main__:Start of Log for new game
+INFO:__main__:This is the log file for mow the lawn. It should track every user input and every print()
+INFO:__main__:Welcome to Mow the Lawn! Do your best to mow the lawn today.
+
+INFO:__main__:Items in inventory: 
+
+INFO:__main__:You have 240 minutes left.
+You are a bit thirsty.
+INFO:__main__:Hydration level:9
+INFO:__main__:User input: stale water -> Stale Water.
+INFO:__main__:Items in inventory: 
+
+INFO:__main__:You have 240 minutes left.
+You are not thirsty.
+INFO:__main__:14 is your water level.
+INFO:__main__:User input: wallet -> Wallet.
+INFO:__main__:Items in inventory: Wallet
+
+INFO:__main__:You have 240 minutes left.
+You are not thirsty.
+INFO:__main__:14 is your water level.
+INFO:__main__:User input: kitchen -> Kitchen.
+INFO:__main__:Items in inventory: Wallet
+
+INFO:__main__:You have 230 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 13
+INFO:__main__:User input: keys -> Keys.
+INFO:__main__:New exits have been added to the car.
+INFO:__main__:Items in inventory: Wallet, Keys
+
+INFO:__main__:You have 230 minutes left.
+You are not thirsty.
+INFO:__main__:13 is your water level.
+INFO:__main__:User input: master bedroom -> Master Bedroom.
+INFO:__main__:Items in inventory: Wallet, Keys
+
+INFO:__main__:You have 220 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 12
+INFO:__main__:User input: credit card -> Credit Card.
+INFO:__main__:Items in inventory: Wallet, Keys, Credit Card
+
+INFO:__main__:You have 220 minutes left.
+You are not thirsty.
+INFO:__main__:12 is your water level.
+INFO:__main__:User input: kitchen -> Kitchen.
+INFO:__main__:Items in inventory: Wallet, Keys, Credit Card
+
+INFO:__main__:You have 210 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 11
+INFO:__main__:User input: grab water -> Grab Water.
+INFO:__main__:Items in inventory: Wallet, Keys, Credit Card, Water Bottle
+
+INFO:__main__:You have 210 minutes left.
+You are not thirsty.
+INFO:__main__:11 is your water level.
+INFO:__main__:User input: grab water -> Grab Water.
+INFO:__main__:Items in inventory: Wallet, Keys, Credit Card, Water Bottle
+
+INFO:__main__:You have 210 minutes left.
+You are not thirsty.
+INFO:__main__:11 is your water level.
+INFO:__main__:User input: garage -> Garage.
+INFO:__main__:Items in inventory: Wallet, Keys, Credit Card, Water Bottle
+
+INFO:__main__:You have 200 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 10
+INFO:__main__:User input: mower -> Mower.
+INFO:__main__:Items in inventory: Wallet, Keys, Credit Card, Water Bottle
+
+INFO:__main__:You have 200 minutes left.
+You are not thirsty.
+INFO:__main__:10 is your water level.
+INFO:__main__:User input: front yard -> Front Yard.
+INFO:__main__:Items in inventory: Wallet, Keys, Credit Card, Water Bottle
+
+INFO:__main__:You have 190 minutes left.
+You are a bit thirsty.
+INFO:__main__:Hydration level: 9
+INFO:__main__:User input: back yard -> Back Yard.
+INFO:__main__:Items in inventory: Wallet, Keys, Credit Card, Water Bottle
+
+INFO:__main__:You have 180 minutes left.
+You are a bit thirsty.
+INFO:__main__:Hydration level: 8
+INFO:__main__:User input: garage -> Garage.
+INFO:__main__:Items in inventory: Wallet, Keys, Credit Card, Water Bottle
+
+INFO:__main__:You have 170 minutes left.
+You are a bit thirsty.
+INFO:__main__:Hydration level: 7
+INFO:__main__:User input: water bottle -> Water Bottle.
+INFO:__main__:Items in inventory: Wallet, Keys, Credit Card
+
+INFO:__main__:You have 170 minutes left.
+You are not thirsty.
+INFO:__main__:22 is your water level.
+INFO:__main__:User input: kitchen -> Kitchen.
+INFO:__main__:Items in inventory: Wallet, Keys, Credit Card
+
+INFO:__main__:You have 160 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 21
+INFO:__main__:User input: garage -> Garage.
+INFO:__main__:Items in inventory: Wallet, Keys, Credit Card
+
+INFO:__main__:You have 150 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 20
+INFO:__main__:User input: car -> Car.
+INFO:__main__:Items in inventory: Wallet, Keys, Credit Card
+
+INFO:__main__:You have 140 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 19
+INFO:__main__:User input: coffee shop -> Coffee Shop.
+INFO:__main__:Items in inventory: Wallet, Keys, Credit Card
+
+INFO:__main__:You have 120 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 17
+INFO:__main__:User input: coffee -> Coffee.
+INFO:__main__:Items in inventory: Wallet, Keys, Credit Card, Coffee
+
+INFO:__main__:You have 120 minutes left.
+You are not thirsty.
+INFO:__main__:17 is your water level.
+INFO:__main__:User input: garage -> Garage.
+INFO:__main__:Items in inventory: Wallet, Keys, Credit Card, Coffee
+
+INFO:__main__:You have 110 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 16
+INFO:__main__:User input: car -> Car.
+INFO:__main__:Items in inventory: Wallet, Keys, Credit Card, Coffee
+
+INFO:__main__:You have 100 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 15
+INFO:__main__:User input: gas station -> Gas Station.
+INFO:__main__:Items in inventory: Wallet, Keys, Credit Card, Coffee
+
+INFO:__main__:You have 80 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 13
+INFO:__main__:User input: gas can -> Gas Can.
+INFO:__main__:Items in inventory: Wallet, Keys, Credit Card, Coffee, Gas Can
+
+INFO:__main__:You have 80 minutes left.
+You are not thirsty.
+INFO:__main__:13 is your water level.
+INFO:__main__:User input: gas receipt -> Gas Receipt.
+INFO:__main__:Items in inventory: Wallet, Keys, Credit Card, Coffee, Gas Can, Gas Receipt
+
+INFO:__main__:You have 80 minutes left.
+You are not thirsty.
+INFO:__main__:13 is your water level.
+INFO:__main__:User input: wallet -> Wallet.
+INFO:__main__:Items in inventory: Wallet, Keys, Credit Card, Coffee, Gas Can, Gas Receipt
+
+INFO:__main__:You have 80 minutes left.
+You are not thirsty.
+INFO:__main__:13 is your water level.
+INFO:__main__:User input: garage -> Garage.
+INFO:__main__:Items in inventory: Wallet, Keys, Credit Card, Coffee, Gas Can, Gas Receipt
+
+INFO:__main__:You have 70 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 12
+INFO:__main__:User input: mower -> Mower.
+INFO:__main__:Items in inventory: Wallet, Keys, Credit Card, Coffee, Gas Can, Gas Receipt
+
+INFO:__main__:You have 70 minutes left.
+You are not thirsty.
+INFO:__main__:12 is your water level.
+INFO:__main__:User input: car -> Car.
+INFO:__main__:Items in inventory: Wallet, Keys, Credit Card, Coffee, Gas Can, Gas Receipt
+
+INFO:__main__:You have 60 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 11
+INFO:__main__:User input: hardware store -> Hardware Store.
+INFO:__main__:Items in inventory: Wallet, Keys, Credit Card, Coffee, Gas Can, Gas Receipt
+
+INFO:__main__:You have 40 minutes left.
+You are a bit thirsty.
+INFO:__main__:Hydration level: 9
+INFO:__main__:User input: air filter -> Air Filter.
+INFO:__main__:Items in inventory: Wallet, Keys, Credit Card, Coffee, Gas Can, Gas Receipt, Air Filter
+
+INFO:__main__:You have 40 minutes left.
+You are a bit thirsty.
+INFO:__main__:9 is your water level.
+INFO:__main__:User input: wallet -> Wallet.
+INFO:__main__:Items in inventory: Wallet, Keys, Credit Card, Coffee, Gas Can, Gas Receipt, Air Filter
+
+INFO:__main__:You have 40 minutes left.
+You are a bit thirsty.
+INFO:__main__:9 is your water level.
+INFO:__main__:User input: keys -> Keys.
+INFO:__main__:Items in inventory: Wallet, Keys, Credit Card, Coffee, Gas Can, Gas Receipt, Air Filter
+
+INFO:__main__:You have 40 minutes left.
+You are a bit thirsty.
+INFO:__main__:9 is your water level.
+INFO:__main__:User input: filter receipt -> Filter Receipt.
+INFO:__main__:Items in inventory: Wallet, Keys, Credit Card, Coffee, Gas Can, Gas Receipt, Air Filter, Filter Receipt
+
+INFO:__main__:You have 40 minutes left.
+You are a bit thirsty.
+INFO:__main__:9 is your water level.
+INFO:__main__:User input: boba shop -> Boba Shop.
+INFO:__main__:Items in inventory: Wallet, Keys, Credit Card, Coffee, Gas Can, Gas Receipt, Air Filter, Filter Receipt
+
+INFO:__main__:You have 20 minutes left.
+You are a bit thirsty.
+INFO:__main__:Hydration level: 7
+INFO:__main__:User input: boba tea -> Boba Tea.
+INFO:__main__:Items in inventory: Wallet, Keys, Credit Card, Coffee, Gas Can, Gas Receipt, Air Filter, Filter Receipt, Boba Tea
+
+INFO:__main__:You have 20 minutes left.
+You are a bit thirsty.
+INFO:__main__:7 is your water level.
+INFO:__main__:User input: garage -> Garage.
+INFO:__main__:Items in inventory: Wallet, Keys, Credit Card, Coffee, Gas Can, Gas Receipt, Air Filter, Filter Receipt, Boba Tea
+
+INFO:__main__:You have 10 minutes left.
+You are thirsty.
+INFO:__main__:Hydration level: 6
+INFO:__main__:User input: car -> Car.
+INFO:__main__:Items in inventory: Wallet, Keys, Credit Card, Coffee, Gas Can, Gas Receipt, Air Filter, Filter Receipt, Boba Tea
+
+INFO:__main__:You have 0 minutes left.
+You are thirsty.
+INFO:__main__:Hydration level: 5
+INFO:__main__:Start of Log for new game
+INFO:__main__:This is the log file for mow the lawn. It should track every user input and every print()
+INFO:__main__:Welcome to Mow the Lawn! Do your best to mow the lawn today.
+
+INFO:__main__:Items in inventory: 
+
+INFO:__main__:You have 240 minutes left.
+You are a bit thirsty.
+INFO:__main__:Hydration level:9
+INFO:__main__:User input: mast bedroom -> Mast Bedroom.
+WARNING:__main__:Mast Bedroom -> Room or Item not found. Please try again.
+INFO:__main__:User input: master bedroom -> Master Bedroom.
+INFO:__main__:Items in inventory: 
+
+INFO:__main__:You have 230 minutes left.
+You are a bit thirsty.
+INFO:__main__:Hydration level: 8
+INFO:__main__:User input: kitchen -> Kitchen.
+INFO:__main__:Items in inventory: 
+
+INFO:__main__:You have 220 minutes left.
+You are a bit thirsty.
+INFO:__main__:Hydration level: 7
+INFO:__main__:User input: grab water -> Grab Water.
+INFO:__main__:Items in inventory: Water Bottle
+
+INFO:__main__:You have 220 minutes left.
+You are a bit thirsty.
+INFO:__main__:7 is your water level.
+INFO:__main__:User input: water bottle -> Water Bottle.
+INFO:__main__:Items in inventory: 
+
+INFO:__main__:You have 220 minutes left.
+You are not thirsty.
+INFO:__main__:22 is your water level.
+INFO:__main__:User input: grab water -> Grab Water.
+INFO:__main__:Items in inventory: Water Bottle
+
+INFO:__main__:You have 220 minutes left.
+You are not thirsty.
+INFO:__main__:22 is your water level.
+INFO:__main__:User input: water bottle -> Water Bottle.
+INFO:__main__:Items in inventory: 
+
+INFO:__main__:You have 220 minutes left.
+You are not thirsty.
+INFO:__main__:37 is your water level.
+INFO:__main__:User input: grab water -> Grab Water.
+INFO:__main__:Items in inventory: Water Bottle
+
+INFO:__main__:You have 220 minutes left.
+You are not thirsty.
+INFO:__main__:37 is your water level.
+INFO:__main__:User input: water bottle -> Water Bottle.
+INFO:__main__:Items in inventory: 
+
+INFO:__main__:You have 0 minutes left.
+You get water poisoning and pass out.
+INFO:__main__:52 is your water level.
+INFO:__main__:Start of Log for new game
+INFO:__main__:This is the log file for mow the lawn. It should track every user input and every print()
+INFO:__main__:Welcome to Mow the Lawn! Do your best to mow the lawn today.
+
+INFO:__main__:Items in inventory: 
+
+INFO:__main__:You have 240 minutes left.
+You are a bit thirsty.
+INFO:__main__:Hydration level:9
+INFO:__main__:Start of Log for new game
+INFO:__main__:This is the log file for mow the lawn. It should track every user input and every print()
+INFO:__main__:Welcome to Mow the Lawn! Do your best to mow the lawn today.
+
+INFO:__main__:Items in inventory: 
+
+INFO:__main__:You have 240 minutes left.
+You are a bit thirsty.
+INFO:__main__:Hydration level:9
+INFO:__main__:User input: wallet -> Wallet.
+INFO:__main__:Items in inventory: Wallet
+
+INFO:__main__:You have 240 minutes left.
+You are a bit thirsty.
+INFO:__main__:9 is your water level.
+INFO:__main__:User input: master bedroom -> Master Bedroom.
+INFO:__main__:Items in inventory: Wallet
+
+INFO:__main__:You have 230 minutes left.
+You are a bit thirsty.
+INFO:__main__:Hydration level: 8
+INFO:__main__:User input: credit card -> Credit Card.
+INFO:__main__:Items in inventory: Wallet, Credit Card
+
+INFO:__main__:You have 230 minutes left.
+You are a bit thirsty.
+INFO:__main__:8 is your water level.
+INFO:__main__:User input: kitchen -> Kitchen.
+INFO:__main__:Items in inventory: Wallet, Credit Card
+
+INFO:__main__:You have 220 minutes left.
+You are a bit thirsty.
+INFO:__main__:Hydration level: 7
+INFO:__main__:User input: garage -> Garage.
+INFO:__main__:Items in inventory: Wallet, Credit Card
+
+INFO:__main__:You have 210 minutes left.
+You are thirsty.
+INFO:__main__:Hydration level: 6
+INFO:__main__:User input: kitchen -> Kitchen.
+INFO:__main__:Items in inventory: Wallet, Credit Card
+
+INFO:__main__:You have 200 minutes left.
+You are thirsty.
+INFO:__main__:Hydration level: 5
+INFO:__main__:User input: gran water -> Gran Water.
+WARNING:__main__:Gran Water -> Room or Item not found. Please try again.
+INFO:__main__:User input: grab water -> Grab Water.
+INFO:__main__:Items in inventory: Wallet, Credit Card, Water Bottle
+
+INFO:__main__:You have 200 minutes left.
+You are thirsty.
+INFO:__main__:5 is your water level.
+INFO:__main__:User input: keys -> Keys.
+INFO:__main__:New exits have been added to the car.
+INFO:__main__:Items in inventory: Wallet, Credit Card, Water Bottle, Keys
+
+INFO:__main__:You have 200 minutes left.
+You are thirsty.
+INFO:__main__:5 is your water level.
+INFO:__main__:User input: water bottle -> Water Bottle.
+INFO:__main__:Items in inventory: Wallet, Credit Card, Keys
+
+INFO:__main__:You have 200 minutes left.
+You are not thirsty.
+INFO:__main__:20 is your water level.
+INFO:__main__:User input: gran water -> Gran Water.
+WARNING:__main__:Gran Water -> Room or Item not found. Please try again.
+INFO:__main__:User input: grab water -> Grab Water.
+INFO:__main__:Items in inventory: Wallet, Credit Card, Keys, Water Bottle
+
+INFO:__main__:You have 200 minutes left.
+You are not thirsty.
+INFO:__main__:20 is your water level.
+INFO:__main__:User input: garage -> Garage.
+INFO:__main__:Items in inventory: Wallet, Credit Card, Keys, Water Bottle
+
+INFO:__main__:You have 190 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 19
+INFO:__main__:User input: car -> Car.
+INFO:__main__:Items in inventory: Wallet, Credit Card, Keys, Water Bottle
+
+INFO:__main__:You have 180 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 18
+INFO:__main__:User input: boba shop -> Boba Shop.
+INFO:__main__:Items in inventory: Wallet, Credit Card, Keys, Water Bottle
+
+INFO:__main__:You have 160 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 16
+INFO:__main__:User input: boba tea -> Boba Tea.
+INFO:__main__:Items in inventory: Wallet, Credit Card, Keys, Water Bottle, Boba Tea
+
+INFO:__main__:You have 160 minutes left.
+You are not thirsty.
+INFO:__main__:16 is your water level.
+INFO:__main__:User input: boba receipt -> Boba Receipt.
+INFO:__main__:Items in inventory: Wallet, Credit Card, Keys, Water Bottle, Boba Tea, Boba Receipt
+
+INFO:__main__:You have 160 minutes left.
+You are not thirsty.
+INFO:__main__:16 is your water level.
+INFO:__main__:User input: gas station -> Gas Station.
+INFO:__main__:Items in inventory: Wallet, Credit Card, Keys, Water Bottle, Boba Tea, Boba Receipt
+
+INFO:__main__:You have 140 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 14
+INFO:__main__:User input: gas can -> Gas Can.
+INFO:__main__:Items in inventory: Wallet, Credit Card, Keys, Water Bottle, Boba Tea, Boba Receipt, Gas Can
+
+INFO:__main__:You have 140 minutes left.
+You are not thirsty.
+INFO:__main__:14 is your water level.
+INFO:__main__:User input: gas receipt -> Gas Receipt.
+INFO:__main__:Items in inventory: Wallet, Credit Card, Keys, Water Bottle, Boba Tea, Boba Receipt, Gas Can, Gas Receipt
+
+INFO:__main__:You have 140 minutes left.
+You are not thirsty.
+INFO:__main__:14 is your water level.
+INFO:__main__:User input: hardware store -> Hardware Store.
+INFO:__main__:Items in inventory: Wallet, Credit Card, Keys, Water Bottle, Boba Tea, Boba Receipt, Gas Can, Gas Receipt
+
+INFO:__main__:You have 120 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 12
+INFO:__main__:User input: air filter -> Air Filter.
+INFO:__main__:Items in inventory: Wallet, Credit Card, Keys, Water Bottle, Boba Tea, Boba Receipt, Gas Can, Gas Receipt, Air Filter
+
+INFO:__main__:You have 120 minutes left.
+You are not thirsty.
+INFO:__main__:12 is your water level.
+INFO:__main__:User input: filter receipt -> Filter Receipt.
+INFO:__main__:Items in inventory: Wallet, Credit Card, Keys, Water Bottle, Boba Tea, Boba Receipt, Gas Can, Gas Receipt, Air Filter, Filter Receipt
+
+INFO:__main__:You have 120 minutes left.
+You are not thirsty.
+INFO:__main__:12 is your water level.
+INFO:__main__:User input: coffee shop -> Coffee Shop.
+INFO:__main__:Items in inventory: Wallet, Credit Card, Keys, Water Bottle, Boba Tea, Boba Receipt, Gas Can, Gas Receipt, Air Filter, Filter Receipt
+
+INFO:__main__:You have 100 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 10
+INFO:__main__:User input: coffee -> Coffee.
+INFO:__main__:Items in inventory: Wallet, Credit Card, Keys, Water Bottle, Boba Tea, Boba Receipt, Gas Can, Gas Receipt, Air Filter, Filter Receipt, Coffee
+
+INFO:__main__:You have 100 minutes left.
+You are not thirsty.
+INFO:__main__:10 is your water level.
+INFO:__main__:User input: coffee receipt -> Coffee Receipt.
+INFO:__main__:Items in inventory: Wallet, Credit Card, Keys, Water Bottle, Boba Tea, Boba Receipt, Gas Can, Gas Receipt, Air Filter, Filter Receipt, Coffee, Coffee Receipt
+
+INFO:__main__:You have 100 minutes left.
+You are not thirsty.
+INFO:__main__:10 is your water level.
+INFO:__main__:User input: wallet -> Wallet.
+INFO:__main__:Items in inventory: Wallet, Credit Card, Keys, Water Bottle, Boba Tea, Boba Receipt, Gas Can, Gas Receipt, Air Filter, Filter Receipt, Coffee, Coffee Receipt
+
+INFO:__main__:You have 100 minutes left.
+You are not thirsty.
+INFO:__main__:10 is your water level.
+INFO:__main__:User input: coffee receipt -> Coffee Receipt.
+INFO:__main__:Items in inventory: Wallet, Credit Card, Keys, Water Bottle, Boba Tea, Boba Receipt, Gas Can, Gas Receipt, Air Filter, Filter Receipt, Coffee, Coffee Receipt
+
+INFO:__main__:You have 100 minutes left.
+You are not thirsty.
+INFO:__main__:10 is your water level.
+INFO:__main__:User input: garage -> Garage.
+INFO:__main__:Items in inventory: Wallet, Credit Card, Keys, Water Bottle, Boba Tea, Boba Receipt, Gas Can, Gas Receipt, Air Filter, Filter Receipt, Coffee, Coffee Receipt
+
+INFO:__main__:You have 90 minutes left.
+You are a bit thirsty.
+INFO:__main__:Hydration level: 9
+INFO:__main__:User input: mower -> Mower.
+INFO:__main__:New exit has been added to the garage.
+INFO:__main__:Items in inventory: Wallet, Credit Card, Keys, Water Bottle, Boba Tea, Boba Receipt, Gas Can, Gas Receipt, Air Filter, Filter Receipt, Coffee, Coffee Receipt
+
+INFO:__main__:You have 90 minutes left.
+You are a bit thirsty.
+INFO:__main__:9 is your water level.
+INFO:__main__:User input: start mowing -> Start Mowing.
+INFO:__main__:Items in inventory: Wallet, Credit Card, Keys, Water Bottle, Boba Tea, Boba Receipt, Gas Can, Gas Receipt, Air Filter, Filter Receipt, Coffee, Coffee Receipt
+
+INFO:__main__:You have 80 minutes left.
+You are a bit thirsty.
+INFO:__main__:Hydration level: 8
+INFO:__main__:User input: boba tea -> Boba Tea.
+INFO:__main__:Items in inventory: Wallet, Credit Card, Keys, Water Bottle, Boba Receipt, Gas Can, Gas Receipt, Air Filter, Filter Receipt, Coffee, Coffee Receipt
+
+INFO:__main__:You have 80 minutes left.
+You are not thirsty.
+INFO:__main__:23 is your water level.
+INFO:__main__:User input: mow front -> Mow Front.
+INFO:__main__:Items in inventory: Wallet, Credit Card, Keys, Water Bottle, Boba Receipt, Gas Can, Gas Receipt, Air Filter, Filter Receipt, Coffee, Coffee Receipt
+
+INFO:__main__:You have 50 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 18
+INFO:__main__:User input: mow back -> Mow Back.
+INFO:__main__:Items in inventory: Wallet, Credit Card, Keys, Water Bottle, Boba Receipt, Gas Can, Gas Receipt, Air Filter, Filter Receipt, Coffee, Coffee Receipt
+
+INFO:__main__:You have 20 minutes left.
+You are not thirsty.
+INFO:__main__:Hydration level: 13
+INFO:__main__:Congrats, you have mowed the lawn. While your parents were not happy with you for taking their card, you were able to calm them down when you showed them the receipts for your purchases.
+INFO:__main__:You win, but maybe things could have gone a little better.
+INFO:__main__:Start of Log for new game
+INFO:__main__:This is the log file for mow the lawn. It should track every user input and every print()
+INFO:__main__:Welcome to Mow the Lawn! Do your best to mow the lawn today.
+
+INFO:__main__:Items in inventory: 
+
+INFO:__main__:You have 240 minutes left.
+You are a bit thirsty.
+INFO:__main__:Hydration level:9
+INFO:__main__:User input: note -> Note.
+INFO:__main__:Items in inventory: Note
+
+INFO:__main__:You have 240 minutes left.
+You are a bit thirsty.
+INFO:__main__:9 is your water level.
+INFO:__main__:User input: kitchen -> Kitchen.
+INFO:__main__:Items in inventory: Note
+
+INFO:__main__:You have 230 minutes left.
+You are a bit thirsty.
+INFO:__main__:Hydration level: 8
