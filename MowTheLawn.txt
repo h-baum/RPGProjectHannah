@@ -1,22 +1,9 @@
 Welcome to Mow the Lawn! Do your best to mow the lawn today.
-
 Turn 1
-Bedroom: A messy room that desparately needs organizing and cleaning. At least nothing is growing, I think?
-
-Exits: Kitchen, Master Bedroom
-Items in room: Note, Wallet, Stale Water
 Items in inventory: 
 Time remaining: 240
 Hydration level:9
-User input: note -> Note.
+User input: c -> C.
 
 Turn 2
-Items in inventory: Note
-Time remaining: 240
-Hydration level: 9.
-User input: kitchen -> Kitchen.
-
-Turn 3
-Items in inventory: Note
-Time remaining: 230
-Hydration level: 8
+Warning: C -> Room or Item not found. Please try again.

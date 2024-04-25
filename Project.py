@@ -1,9 +1,11 @@
 """
 Author:         Hannah Baum
-Date:           4/20/24
+Date:           4/25/24
 Assignment:     Project 2
 Course:         CPSC1051
 Lab Section:    SECTION 002
+Game Title:     Mow the Lawn
+GitHub Link:    https://github.com/h-baum/RPGProjectHannah/tree/main
 
 CODE DESCRIPTION: This code runs a text-based RPG game. The goal is to mow the lawn before your parents get home.
 There are 5 ways to lose the game. You can pass out from dehydration, run out of time, drive without your wallet, 
@@ -25,6 +27,7 @@ You start the game with 240 minutes.
 Interacting with items in room or inventory does not decrease time or hydration, only moving rooms does. 
 Mower is a permanent item in the garage, but it unlocks start mowing exit if you have the correct items in your inventory.
 It is possible to pass out or run out of time as you are finishing mowing, and if that happens, you lose. 
+The log file stores the turns, user input, time, hydration, and items in inventory.
 """
 
 #import the logging module
@@ -157,8 +160,9 @@ class SuperItem:
         return self.inventory_text
 
 #Purchase subclass of SuperItem 
+#affects items that are purchasable, such as Boba Tea, Coffee, Air Filter, and Gas Can
 class Purchase(SuperItem):
-    #
+    #initializes purchasable item's name, type, text when picked up, and text when selected while in inventory
     def __init__(self, name, itemtype, pickuptext, inventorytext):
         SuperItem.__init__(self, name, itemtype, pickuptext, inventorytext)
 
@@ -203,6 +207,7 @@ class Permanent(SuperItem):
         elif text_id == 2:
             string_overall += self.get_inventory_text()
         return string_overall
+
 #
 class Wallet(SuperItem):
     #
@@ -221,9 +226,9 @@ class Wallet(SuperItem):
             string_overall += ' in it.'
         return string_overall
 
-#
+#Room class contains descriptors of the room
 class Room:
-    #
+    #initializes the room name, room description, list of exits, list of unlockable exits, list of items in room, time remaining, hydration level
     def __init__(self, name, description, exits, unlockable_exit, items, time, hydration):
         self.name = name
         self.description = description
@@ -233,19 +238,19 @@ class Room:
         self.time = time
         self.hydration = hydration
 
-    #
+    #returns name of the room -> str
     def get_name(self):
         return self.name
     
-    #
+    #returns description of the room -> str
     def get_description(self):
         return self.description
     
-    #
+    #returns list of exits -> list
     def get_exits(self):
         return self.exits
 
-    #
+    #returns a string of exits from the list of exits, deletes last comma
     def list_exits(self):
         string_exits = ""
         for i in self.get_exits():
@@ -253,30 +258,31 @@ class Room:
         string_exits = string_exits[:-2]
         return string_exits
 
-    #
+    #returns list of unlockable exits -> list
     def get_unlockable_exit(self):
         return self.unlockable_exit
 
-    #
+    #adds the list of newly unlocked exits to the overall list of exits for that room, returns a list of exits
     def update_exits(self):
         for i in range(len(self.unlockable_exit)):
             self.get_exits().append(self.unlockable_exit[i])
+        #the newly unlocked exits can not be added again by meeting the same criteria, they are permanently unlocked
         self.get_unlockable_exit().clear()
         return self.exits
 
-    #
+    #returns a list of items in the room -> list
     def get_items(self):
         return self.items
     
-    #
+    #returns the time -> int
     def get_time(self):
         return self.time
 
-    #    
+    #returns the hydration -> int
     def get_hydration(self):
         return self.hydration
 
-    #
+    #returns a string of items from the list of items, deletes last comma
     def list_items(self):
         string_items = ""
         for i in self.get_items():
@@ -284,17 +290,17 @@ class Room:
         string_items = string_items[:-2]
         return string_items
 
-    #
+    #adds the items to the room, returns list of current items in room
     def add_items(self, item_to_add):
         self.get_items().append(item_to_add)
         return self.items
 
-    #
+    #removes items from the room, returns list of current items in room
     def update_items(self, item_to_remove):
         self.get_items().remove(item_to_remove)
         return self.items
 
-    #
+    #returns string containing the room name, description, list of exits, and list of items in the room
     def __str__(self):
         string_overall = ""
         string_overall += f"{self.get_name()}: "
@@ -363,11 +369,11 @@ def main():
     item_tracker.add_item(Pickup('Stale Water', 'Instant Drink', 'You drink the stale water. Better than nothing.', ''))
 
     #prints and logs opening lines
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     print("Welcome to Mow the Lawn! Do your best to mow the lawn today.\n")
     logger.info("Welcome to Mow the Lawn! Do your best to mow the lawn today.\n")
-    X.write("Welcome to Mow the Lawn! Do your best to mow the lawn today.\n\n")
+    X.write("Welcome to Mow the Lawn! Do your best to mow the lawn today.\n")
     X.write(f'Turn {turn}\n')
-    print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     print("You wake up in your room. Next to you there is a note on the table next to the bed, as well as a cup of room-temperature water. It's currently noon, and you're feeling a bit thirsty.")
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     #initializes inventory as a list
