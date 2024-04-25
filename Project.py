@@ -214,6 +214,7 @@ class Wallet(SuperItem):
     def __init__(self, name, itemtype, pickuptext, inventorytext):
         SuperItem.__init__(self, name, itemtype, pickuptext, inventorytext)
 
+    #returns a string containing the infomation about the wallet, such as how much money is left in it
     #
     def displayinfo(self, text_id, money_left):
         string_overall = ''
@@ -226,7 +227,7 @@ class Wallet(SuperItem):
             string_overall += ' in it.'
         return string_overall
 
-#Room class contains descriptors of the room
+#Room class contains descriptors of the room: name, description, list of exits, list of unlockable exits, list of items in room, time remaining, hydration level
 class Room:
     #initializes the room name, room description, list of exits, list of unlockable exits, list of items in room, time remaining, hydration level
     def __init__(self, name, description, exits, unlockable_exit, items, time, hydration):
@@ -346,13 +347,13 @@ def main():
     item_tracker = ItemTracker()
 
     #item: name, type of item, pickup text, interact text
-    #non-drinkable, purchasable item, enters inventory
+    #non-drinkable, purchasable item, enters inventory, stays in inventory forever
     item_tracker.add_item(Purchase('Gas Can','Purchase Item','You attempt to purchase a can of gas for $5.','It is a can of gas.'))
     item_tracker.add_item(Purchase('Air Filter', 'Purchase Item', 'You attempt to purchase an air filter for $5.','It is an air filter.'))
-    #drinkable, purchasable item, enters inventory
+    #drinkable, purchasable item, enters inventory, can be drunk and disapears from inventory
     item_tracker.add_item(Purchase('Boba Tea', 'Purchase Drink', 'You attempt to purchase a boba tea for $5.', 'You drink the boba tea, and feel refreshed.'))
     item_tracker.add_item(Purchase('Coffee', 'Purchase Drink', 'You attempt to purchase a coffee for $5.', 'You drink the coffee, and feel energized.'))
-    #enters inventory
+    #enters inventory, stays in inventory forever
     item_tracker.add_item(Pickup('Keys', 'Pickup', 'You have picked up a key chain.', 'It is a key chain.'))
     item_tracker.add_item(Pickup('Credit Card', 'Pickup', 'You take your parents credit card.', 'You wonder if your parents will notice you took it. Oh well, you are going to use it for all your purchases. Surely it will be fine.'))
     item_tracker.add_item(Pickup('Gas Receipt', 'Pickup Receipt', 'You pick up a receipt', 'It is a record of your purchase at the gas station.'))

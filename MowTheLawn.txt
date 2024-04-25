@@ -3,7 +3,19 @@ Turn 1
 Items in inventory: 
 Time remaining: 240
 Hydration level:9
-User input: c -> C.
+User input: clc -> Clc.
 
 Turn 2
-Warning: C -> Room or Item not found. Please try again.
+Warning: Clc -> Room or Item not found. Please try again.
+User input: clear -> Clear.
+
+Turn 3
+Warning: Clear -> Room or Item not found. Please try again.
+User input: close -> Close.
+
+Turn 4
+Warning: Close -> Room or Item not found. Please try again.
+User input: exit -> Exit.
+
+Turn 5
+Warning: Exit -> Room or Item not found. Please try again.
