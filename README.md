@@ -28,7 +28,6 @@ Normal Win with Credit Card in Inventory:
 Welcome to Mow the Lawn! Do your best to mow the lawn today.
 
 You wake up in your room. Next to you there is a note on the table next to the bed, as well as a cup of room-temperature water. It's currently noon, and you're feeling a bit thirsty.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Bedroom: A messy room that desparately needs organizing and cleaning. At least nothing is growing, I think?
 
 Exits: Kitchen, Master Bedroom
@@ -41,9 +40,7 @@ You are a bit thirsty.
 What would you like to do?
 wallet
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Wallet: You pick up your wallet. It has $10 in it as well as your license.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Bedroom: A messy room that desparately needs organizing and cleaning. At least nothing is growing, I think?
 
 Exits: Kitchen, Master Bedroom
@@ -56,9 +53,8 @@ You are a bit thirsty.
 What would you like to do?
 stale water
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Stale Water: You drink the stale water. Better than nothing.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Bedroom: A messy room that desparately needs organizing and cleaning. At least nothing is growing, I think?
 
 Exits: Kitchen, Master Bedroom
@@ -71,9 +67,7 @@ You are not thirsty.
 What would you like to do?
 note
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Note: It is a note that says, "Hi kid, we just left, and you need to mow the lawn before we get home, or you are grounded. We will be back at 4pm, so get moving!"
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Bedroom: A messy room that desparately needs organizing and cleaning. At least nothing is growing, I think?
 
 Exits: Kitchen, Master Bedroom
@@ -86,9 +80,7 @@ You are not thirsty.
 What would you like to do?
 wallet
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Wallet: It is a wallet with your license and $10 in it.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Bedroom: A messy room that desparately needs organizing and cleaning. At least nothing is growing, I think?
 
 Exits: Kitchen, Master Bedroom
@@ -101,7 +93,6 @@ You are not thirsty.
 What would you like to do?
 master bedroom
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Master Bedroom: Your parents keep their room clean and tidy. The beds are nicely made, the clothes are folded and put away. Maybe you could take some hints?
 
 Exits: Kitchen, Bedroom
@@ -114,9 +105,8 @@ You are not thirsty.
 What would you like to do?
 credit card
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Credit Card: You take your parents credit card.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Master Bedroom: Your parents keep their room clean and tidy. The beds are nicely made, the clothes are folded and put away. Maybe you could take some hints?
 
 Exits: Kitchen, Bedroom
@@ -129,7 +119,6 @@ You are not thirsty.
 What would you like to do?
 kitchen
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Kitchen: A room with a leaky sink and an near-empty fridge, containing only several water bottles.
 
 Exits: Garage, Master Bedroom, Bedroom
@@ -142,9 +131,7 @@ You are not thirsty.
 What would you like to do?
 keys 
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Keys: You have picked up a key chain.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Kitchen: A room with a leaky sink and an near-empty fridge, containing only several water bottles.
 
 Exits: Garage, Master Bedroom, Bedroom
@@ -157,9 +144,7 @@ You are not thirsty.
 What would you like to do?
 grab water
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Grab Water: You take a water bottle from the fridge.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Kitchen: A room with a leaky sink and an near-empty fridge, containing only several water bottles.
 
 Exits: Garage, Master Bedroom, Bedroom
@@ -172,9 +157,7 @@ You are not thirsty.
 What would you like to do?
 grab water
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Grab Water: You already have one, so what are you doing? Don't be greedy.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Kitchen: A room with a leaky sink and an near-empty fridge, containing only several water bottles.
 
 Exits: Garage, Master Bedroom, Bedroom
@@ -187,7 +170,6 @@ You are not thirsty.
 What would you like to do?
 garage
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Garage: There's a car parked in the garage. There's some tools, ladders, and cobwebs against the walls.
 
 Exits: Kitchen, Front Yard, Back Yard, Car
@@ -200,9 +182,7 @@ You are not thirsty.
 What would you like to do?
 mower
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Mower: You try to start the mower, but nothing happens. Maybe it needs something.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Garage: There's a car parked in the garage. There's some tools, ladders, and cobwebs against the walls.
 
 Exits: Kitchen, Front Yard, Back Yard, Car
@@ -215,7 +195,6 @@ You are not thirsty.
 What would you like to do?
 car
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Car: You get inside the vehicle. If you have keys, you can drive to many places.
 
 Exits: Garage, Boba Shop, Coffee Shop, Gas Station, Hardware Store
@@ -228,7 +207,6 @@ You are not thirsty.
 What would you like to do?
 gas station
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Gas Station: You drive to a store containing gas for your lawn mower.
 
 Exits: Garage, Boba Shop, Coffee Shop, Hardware Store
@@ -241,9 +219,8 @@ You are a bit thirsty.
 What would you like to do?
 gas can
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Gas Can: You attempt to purchase a can of gas for $5.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Gas Station: You drive to a store containing gas for your lawn mower.
 
 Exits: Garage, Boba Shop, Coffee Shop, Hardware Store
@@ -256,9 +233,7 @@ You are a bit thirsty.
 What would you like to do?
 gas receipt
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Gas Receipt: You pick up a receipt
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Gas Station: You drive to a store containing gas for your lawn mower.
 
 Exits: Garage, Boba Shop, Coffee Shop, Hardware Store
@@ -271,7 +246,6 @@ You are a bit thirsty.
 What would you like to do?
 hardware store
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Hardware Store: You drive to a store containing air filters for your lawn mower.
 
 Exits: Garage, Gas Station, Boba Shop, Coffee Shop
@@ -284,9 +258,7 @@ You are thirsty.
 What would you like to do?
 air filter
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Air Filter: You attempt to purchase an air filter for $5.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Hardware Store: You drive to a store containing air filters for your lawn mower.
 
 Exits: Garage, Gas Station, Boba Shop, Coffee Shop
@@ -299,9 +271,7 @@ You are thirsty.
 What would you like to do?
 filter receipt
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Filter Receipt: You pick up a receipt
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Hardware Store: You drive to a store containing air filters for your lawn mower.
 
 Exits: Garage, Gas Station, Boba Shop, Coffee Shop
@@ -314,9 +284,7 @@ You are thirsty.
 What would you like to do?
 water bottle
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Water Bottle: You drink the water. Gotta stay hydrated.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Hardware Store: You drive to a store containing air filters for your lawn mower.
 
 Exits: Garage, Gas Station, Boba Shop, Coffee Shop
@@ -329,7 +297,6 @@ You are not thirsty.
 What would you like to do?
 boba shop
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Boba Shop: You drive to a shop stocked with all the delicious boba drinks you could imagine!!!
 
 Exits: Garage, Coffee Shop, Gas Station, Hardware Store
@@ -342,9 +309,7 @@ You are not thirsty.
 What would you like to do?
 boba tea
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Boba Tea: You attempt to purchase a boba tea for $5.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Boba Shop: You drive to a shop stocked with all the delicious boba drinks you could imagine!!!
 
 Exits: Garage, Coffee Shop, Gas Station, Hardware Store
@@ -357,9 +322,7 @@ You are not thirsty.
 What would you like to do?
 boba receipt
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Boba Receipt: You pick up a receipt
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Boba Shop: You drive to a shop stocked with all the delicious boba drinks you could imagine!!!
 
 Exits: Garage, Coffee Shop, Gas Station, Hardware Store
@@ -372,7 +335,6 @@ You are not thirsty.
 What would you like to do?
 garage
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Garage: There's a car parked in the garage. There's some tools, ladders, and cobwebs against the walls.
 
 Exits: Kitchen, Front Yard, Back Yard, Car
@@ -385,9 +347,7 @@ You are not thirsty.
 What would you like to do?
 mower
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Mower: You fill the mower with gas and replace the air filter, and it starts! Congratulations, better start mowing.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Garage: There's a car parked in the garage. There's some tools, ladders, and cobwebs against the walls.
 
 Exits: Kitchen, Front Yard, Back Yard, Car, Start Mowing
@@ -400,7 +360,6 @@ You are not thirsty.
 What would you like to do?
 start mowing
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Start Mowing: You successfully start the mower.
 
 Exits: Mow Front, Mow Back, Garage
@@ -413,7 +372,6 @@ You are not thirsty.
 What would you like to do?
 mow front
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Mow Front: You mow the front yard.
 
 Exits: Mow Back, Garage
@@ -426,7 +384,6 @@ You are not thirsty.
 What would you like to do?
 mow back
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Mow Back: You mow the back yard.
 
 Exits: Mow Front, Garage
@@ -436,7 +393,6 @@ Items in inventory: Wallet, Note, Credit Card, Keys, Gas Can, Gas Receipt, Air F
 You have 60 minutes left.
 You are a bit thirsty.
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Congrats, you have mowed the lawn. While your parents were not happy with you for taking their card, you were able to calm them down when you showed them the receipts for your purchases.
 You win, but maybe things could have gone a little better.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
