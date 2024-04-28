@@ -1,13 +1,16 @@
 # RPGProjectHannah
 This is Project2 of CPSC1050 Introduction to Programming in Python.
+
 The game's title is Mow the Lawn
+
 GitHub Link:    https://github.com/h-baum/RPGProjectHannah/tree/main
 
 CODE DESCRIPTION: This code runs a text-based RPG game. The goal is to mow the lawn before your parents get home.
-There are 5 ways to lose the game. You can pass out from dehydration, run out of time, drive without your wallet, 
-drink too much and get water poisoning, or take your parents credit card and don't have all the receipts for your purchases.
-There are 3 win messages. One is when you speedrun the game and make no/almost no extra moves (Best Ending), another is when you finish the game in time
-but make several unnecessary moves without using the credit card, and the last is when you take the credit card so you spend your parents money, and you show the receipts.
+
+There are 5 ways to lose the game. You can pass out from dehydration, run out of time, drive without your wallet, drink too much and get water poisoning, or take your parents credit card and don't have all the receipts for your purchases.
+
+There are 3 win messages. One is when you speedrun the game and make no/almost no extra moves (Best Ending), another is when you finish the game in time but make several unnecessary moves without using the credit card, and the last is when you take the credit card so you spend your parents money, and you show the receipts.
+
 Drinks go straight to your inventory when selected from the room and can be drunk (selected) at any later time in the game.
 The only exception to that is the stale water, which will be drunk immediately and serves the purpose of letting you start not being a little bit thirsty. 
 It's not necessary, but it also shows you how drinking water changes your thirst level.
