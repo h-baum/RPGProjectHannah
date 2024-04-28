@@ -26,13 +26,13 @@ Mower is a permanent item in the garage, but it unlocks start mowing exit if you
 It is possible to pass out or run out of time as you are finishing mowing, and if that happens, you lose. 
 The log file stores the number of turns, user input, time, hydration, and items in inventory.
 
-Instructions: Your next move can be selecting an item in the room, an item in your inventory, or an exit.
-You need to type in the actual name of the item or exit, but capitalization doesn't matter. If you type something
+Instructions: Your next move can be typing the name of an item in the room, an item in your inventory, or an exit.
+You need to type in the actual name of the item or exit, no abbreviations or short form, but capitalization doesn't matter. If you type something
 that is not one of those choices, it will raise an exception class that will tell you that was not a valid option
 and you can reinput something.
 
 
-Test Cases:
+Sample Test Cases:
 
 Test Case 1
 Normal Win with Credit Card in Inventory:
