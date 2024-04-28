@@ -11,9 +11,7 @@ There are 5 ways to lose the game. You can pass out from dehydration, run out of
 There are 3 win messages. One is when you speedrun the game and make no/almost no extra moves (Best Ending), another is when you finish the game in time but make several unnecessary moves without using the credit card, and the last is when you take the credit card so you spend your parents money, and you show the receipts.
 
 With each room you go into, the hydration, time remaining, and items in room will update. Inventory will only change if you add something from the room or use up something in your inventory.
-Drinks go straight to your inventory when selected from the room and can be drunk (selected) at any later time in the game.
-The only exception to that is the stale water, which will be drunk immediately and serves the purpose of letting you start not being a little bit thirsty. 
-It's not necessary, but it also shows you how drinking water changes your thirst level.
+Drinks go straight to your inventory when selected from the room and can be drunk (selected) at any later time in the game. The only exception to that is the stale water, which will be drunk immediately and serves the purpose of letting you start not being a little bit thirsty. It's not necessary, but it also shows you how drinking water changes your thirst level.
 Any non-drink in your inventory will just read a description when you select it.
 If you go to the mower without gas can and air filter, mower will not start. 
 If you go to the car without keys, you can not go from your car to any of the shops.
