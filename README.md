@@ -1,24 +1,34 @@
 # RPGProjectHannah
 This is Project2 of CPSC1050 Introduction to Programming in Python.
 The game's title is Mow the Lawn
+GitHub Link:    https://github.com/h-baum/RPGProjectHannah/tree/main
 
 CODE DESCRIPTION: This code runs a text-based RPG game. The goal is to mow the lawn before your parents get home.
-There are 5 ways to lose the game. You can pass out from dehydration, run out of time, drive without your wallet, drink too much and get water poisoning, or take your parents credit card and don't have all the receipts for your purchases.
-There are 3 win messages. One is when you speedrun the game and make no/almost no extra moves (Best Ending), another is when you finish the game in time but make several unnecessary moves without using the credit card, and the last is when you take the credit card so you spend your parents money, and you show the receipts.
-Your move can always be typing an item in the room, typing an item in your inventory, or typing an exit.
+There are 5 ways to lose the game. You can pass out from dehydration, run out of time, drive without your wallet, 
+drink too much and get water poisoning, or take your parents credit card and don't have all the receipts for your purchases.
+There are 3 win messages. One is when you speedrun the game and make no/almost no extra moves (Best Ending), another is when you finish the game in time
+but make several unnecessary moves without using the credit card, and the last is when you take the credit card so you spend your parents money, and you show the receipts.
 Drinks go straight to your inventory when selected from the room and can be drunk (selected) at any later time in the game.
-The only exception to that is the stale water, which will be drunk immediately and serves the purpose of letting you start not being a little bit thirsty. It's not necessary to win, but it also shows you how drinking water changes your thirst level.
+The only exception to that is the stale water, which will be drunk immediately and serves the purpose of letting you start not being a little bit thirsty. 
+It's not necessary, but it also shows you how drinking water changes your thirst level.
 Any non-drink in your inventory will just read a description when you select it.
 If you go to the mower without gas can and air filter, mower will not start. 
-If you go to the car without keys, you can not go from your car to any of the shops. Your only exit will be the garage.
+If you go to the car without keys, you can not go from your car to any of the shops.
 If you are walking from room to room, it takes 10 minutes and hydration goes down by 1.
-Driving from room to room takes 20 minutes, and hydration goes down by 2.
-Mowing from room to room takes 30 minutes, and hydration goes down by 3.
-You start the game with hydration of 9. Drinking anything increases hydration by 15, except for stale water which only increases hydration by 5.
+Driving from room to room takes 20 minutes, and hydration goes down by 1.
+Mowing half of the lawn takes 30 minutes, and hydration goes down by 5. In total, it will take 70 minutes to go from start mowing to ending the game by finishing mowing both front and back.
+You start the game with hydration of 10. Drinking anything increases hydration by 15, except for stale water which only increases hydration by 5.
 You start the game with 240 minutes. 
 Interacting with items in room or inventory does not decrease time or hydration, only moving rooms does. 
 Mower is a permanent item in the garage, but it unlocks start mowing exit if you have the correct items in your inventory.
-It is possible to pass out or run out of time as you are mowing the second half of the lawn, and if that happens, you lose.
+It is possible to pass out or run out of time as you are finishing mowing, and if that happens, you lose. 
+The log file stores the number of turns, user input, time, hydration, and items in inventory.
+
+Instructions: Your next move can be selecting an item in the room, an item in your inventory, or an exit.
+You need to type in the actual name of the item or exit, but capitalization doesn't matter. If you type something
+that is not one of those choices, it will raise an exception class that will tell you that was not a valid option
+and you can reinput something.
+
 
 Test Cases:
 
