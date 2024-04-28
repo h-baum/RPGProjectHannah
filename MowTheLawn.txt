@@ -3,19 +3,176 @@ Turn 1
 Items in inventory: 
 Time remaining: 240
 Hydration level:9
-User input: clc -> Clc.
+User input: wallet -> Wallet.
 
 Turn 2
-Warning: Clc -> Room or Item not found. Please try again.
-User input: clear -> Clear.
+Items in inventory: Wallet
+Time remaining: 240
+Hydration level: 9.
+User input: master bEDROOM -> Master Bedroom.
 
 Turn 3
-Warning: Clear -> Room or Item not found. Please try again.
-User input: close -> Close.
+Items in inventory: Wallet
+Time remaining: 230
+Hydration level: 8
+User input: credit card -> Credit Card.
 
 Turn 4
-Warning: Close -> Room or Item not found. Please try again.
-User input: exit -> Exit.
+Items in inventory: Wallet, Credit Card
+Time remaining: 230
+Hydration level: 8.
+User input: kitchen -> Kitchen.
 
 Turn 5
-Warning: Exit -> Room or Item not found. Please try again.
+Items in inventory: Wallet, Credit Card
+Time remaining: 220
+Hydration level: 7
+User input: keys -> Keys.
+
+Turn 6
+New exits have been added to the car.
+Items in inventory: Wallet, Credit Card, Keys
+Time remaining: 220
+Hydration level: 7.
+User input: grab water -> Grab Water.
+
+Turn 7
+Items in inventory: Wallet, Credit Card, Keys, Water Bottle
+Time remaining: 220
+Hydration level: 7.
+User input: water bottle -> Water Bottle.
+
+Turn 8
+Items in inventory: Wallet, Credit Card, Keys
+Time remaining: 220
+Hydration level: 22
+User input: grab water -> Grab Water.
+
+Turn 9
+Items in inventory: Wallet, Credit Card, Keys, Water Bottle
+Time remaining: 220
+Hydration level: 22.
+User input: garage -> Garage.
+
+Turn 10
+Items in inventory: Wallet, Credit Card, Keys, Water Bottle
+Time remaining: 210
+Hydration level: 21
+User input: front yard -> Front Yard.
+
+Turn 11
+Items in inventory: Wallet, Credit Card, Keys, Water Bottle
+Time remaining: 200
+Hydration level: 20
+User input: back yard -> Back Yard.
+
+Turn 12
+Items in inventory: Wallet, Credit Card, Keys, Water Bottle
+Time remaining: 190
+Hydration level: 19
+User input: garage -> Garage.
+
+Turn 13
+Items in inventory: Wallet, Credit Card, Keys, Water Bottle
+Time remaining: 180
+Hydration level: 18
+User input: car -> Car.
+
+Turn 14
+Items in inventory: Wallet, Credit Card, Keys, Water Bottle
+Time remaining: 170
+Hydration level: 17
+User input: boba shop -> Boba Shop.
+
+Turn 15
+Items in inventory: Wallet, Credit Card, Keys, Water Bottle
+Time remaining: 150
+Hydration level: 15
+User input: boba tea -> Boba Tea.
+
+Turn 16
+Items in inventory: Wallet, Credit Card, Keys, Water Bottle, Boba Tea
+Time remaining: 150
+Hydration level: 15.
+User input: boba receipt -> Boba Receipt.
+
+Turn 17
+Items in inventory: Wallet, Credit Card, Keys, Water Bottle, Boba Tea, Boba Receipt
+Time remaining: 150
+Hydration level: 15.
+User input: gas station -> Gas Station.
+
+Turn 18
+Items in inventory: Wallet, Credit Card, Keys, Water Bottle, Boba Tea, Boba Receipt
+Time remaining: 130
+Hydration level: 13
+User input: gas can -> Gas Can.
+
+Turn 19
+Items in inventory: Wallet, Credit Card, Keys, Water Bottle, Boba Tea, Boba Receipt, Gas Can
+Time remaining: 130
+Hydration level: 13.
+User input: gas receipt -> Gas Receipt.
+
+Turn 20
+Items in inventory: Wallet, Credit Card, Keys, Water Bottle, Boba Tea, Boba Receipt, Gas Can, Gas Receipt
+Time remaining: 130
+Hydration level: 13.
+User input: hardware store -> Hardware Store.
+
+Turn 21
+Items in inventory: Wallet, Credit Card, Keys, Water Bottle, Boba Tea, Boba Receipt, Gas Can, Gas Receipt
+Time remaining: 110
+Hydration level: 11
+User input: air filter -> Air Filter.
+
+Turn 22
+Items in inventory: Wallet, Credit Card, Keys, Water Bottle, Boba Tea, Boba Receipt, Gas Can, Gas Receipt, Air Filter
+Time remaining: 110
+Hydration level: 11.
+User input: filter receipt -> Filter Receipt.
+
+Turn 23
+Items in inventory: Wallet, Credit Card, Keys, Water Bottle, Boba Tea, Boba Receipt, Gas Can, Gas Receipt, Air Filter, Filter Receipt
+Time remaining: 110
+Hydration level: 11.
+User input: garage -> Garage.
+
+Turn 24
+Items in inventory: Wallet, Credit Card, Keys, Water Bottle, Boba Tea, Boba Receipt, Gas Can, Gas Receipt, Air Filter, Filter Receipt
+Time remaining: 100
+Hydration level: 10
+User input: mower -> Mower.
+
+Turn 25
+New exit has been added to the garage.
+Items in inventory: Wallet, Credit Card, Keys, Water Bottle, Boba Tea, Boba Receipt, Gas Can, Gas Receipt, Air Filter, Filter Receipt
+Time remaining: 100
+Hydration level: 10.
+User input: start mowing -> Start Mowing.
+
+Turn 26
+Items in inventory: Wallet, Credit Card, Keys, Water Bottle, Boba Tea, Boba Receipt, Gas Can, Gas Receipt, Air Filter, Filter Receipt
+Time remaining: 90
+Hydration level: 9
+User input: boba tea -> Boba Tea.
+
+Turn 27
+Items in inventory: Wallet, Credit Card, Keys, Water Bottle, Boba Receipt, Gas Can, Gas Receipt, Air Filter, Filter Receipt
+Time remaining: 90
+Hydration level: 24
+User input: mow back -> Mow Back.
+
+Turn 28
+Items in inventory: Wallet, Credit Card, Keys, Water Bottle, Boba Receipt, Gas Can, Gas Receipt, Air Filter, Filter Receipt
+Time remaining: 60
+Hydration level: 19
+User input: mow front -> Mow Front.
+
+Turn 29
+Items in inventory: Wallet, Credit Card, Keys, Water Bottle, Boba Receipt, Gas Can, Gas Receipt, Air Filter, Filter Receipt
+Time remaining: 30
+Hydration level: 14
+Congrats, you have mowed the lawn. While your parents were not happy with you for taking their card, you were able to calm them down when you showed them the receipts for your purchases.
+You win, but maybe things could have gone a little better.
+
